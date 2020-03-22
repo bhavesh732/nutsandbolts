@@ -1,8 +1,4 @@
-.container-fluid .row a {
-    width: 50%;
-}
-
-.col-sm-6 {
+.col-sm-4 {
     height: 50vh;
     width: 100%;
     background-image: url(../resources/760x360.jpg);
@@ -10,6 +6,44 @@
 
 footer {
     margin-top: 0px;
+}
+
+.col-sm-4 a .row .col-sm-12,
+.col-sm-4 a {
+    background-color: black;
+    height: 35vh;
+    width: 100%;
+}
+
+.col-sm-4 a:nth-child(2) .row .col-sm-12 {
+    background-color: #ffc102;
+    height: 15vh;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.col-sm-4 a:nth-child(1) .row .col-sm-12 {
+    background-image: url(../resources/497x253.png);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.container-fluid {
+    padding: 0px;
+}
+
+.row .col-sm-4:nth-child(2) {
+    padding: 0px;
+}
+
+.col-sm-4 {
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: 5px;
+}
+
+.row {
+    margin: 0px;
 }
 
 .logo {
@@ -24,7 +58,7 @@ footer {
 }
 
 #butons {
-    padding-top: 25vh;
+    padding-top: 20vh;
 }
 
 nav ul li strong span span {
@@ -76,5 +110,19 @@ nav ul li strong span {
     .ytlogo {
         margin-right: 10px;
         margin-top: 5px;
+    }
+    .row .col-sm-4:nth-child(2) {
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 5px;
+        margin-top: 0px;
+    }
+    .row .col-sm-4:nth-child(3) {
+        padding-top: 5px;
+        margin-top: 0px;
+    }
+    .row .col-sm-4:nth-child(1) {
+        padding-top: 5px;
+        margin-top: 0px;
     }
 }

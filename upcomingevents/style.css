@@ -80,4 +80,7 @@ nav ul li strong span {
     .navpos {
         margin-top: 0px;
     }
+    #butons {
+        padding-top: 20vh;
+    }
 }

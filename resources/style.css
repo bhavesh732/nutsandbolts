@@ -17,17 +17,6 @@
     font-family: "Poppins";
 }
 
-
-/* input:focus,
-textarea:focus,
-select:focus {
-    outline: none;
-}
-
-button {
-    outline: none;
-} */
-
 body {
     background-color: black;
 }
@@ -297,16 +286,6 @@ nav ul li a:nth-child(1) {
 
 .navpostrans:hover div {
     transform: scale(0);
-}
-
-.navpos1 {
-    background-image: url('navbarlogo.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-color: #FFC102;
-    background-position: center;
-    height: 100%;
-    border-radius: 60px;
 }
 
 .vertnav {

@@ -162,4 +162,7 @@ span br {
     span br {
         display: block;
     }
+    #butons {
+        padding-top: 20vh;
+    }
 }
