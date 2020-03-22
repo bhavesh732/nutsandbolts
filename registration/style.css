@@ -31,6 +31,7 @@ input {
     border-radius: 3px;
     border: 1px solid black;
     margin: 3px;
+    width: 80%;
 }
 
 nav ul li strong span span {
