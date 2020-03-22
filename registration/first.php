@@ -87,7 +87,7 @@
 				}
 			}
 
-			echo "VALIDATOR = ".$validator;
+			// echo "VALIDATOR = ".$validator;
 
 			if($validator==5){
 				$fname = test_input($_POST['FirstName']);
