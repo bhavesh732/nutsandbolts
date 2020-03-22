@@ -1,0 +1,773 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+* {
+    font-family: "Poppins";
+}
+
+
+/*
+#201f1f
+#ffc102
+#000000
+#ffffff
+#a5a5a5
+*/
+
+* {
+    margin: 0px;
+    font-family: "Poppins";
+}
+
+
+/* input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+}
+
+button {
+    outline: none;
+} */
+
+body {
+    background-color: black;
+}
+
+#bod {
+    background-color: black;
+}
+
+.section {
+    display: none;
+}
+
+.section1 {
+    display: block;
+}
+
+button {
+    border-radius: 25px;
+    border: none;
+    padding: 5px 10px;
+    margin: 0px 5px;
+    background-color: rgba(0, 0, 0, 0);
+    color: black;
+}
+
+button:hover {
+    background-color: black;
+    color: #FFC102;
+}
+
+.navbar {
+    align-content: center;
+    /* background-color: rgba(32, 31, 31,0.4); */
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0px;
+}
+
+nav ul {
+    margin-bottom: 0px;
+}
+
+.fixheight2 {
+    height: 0vh;
+    bottom: 0px;
+    transition: 1s;
+}
+
+.fixheight {
+    height: 30vh;
+    margin-top: 13.5vh;
+    transition: 1s;
+}
+
+div div div button {
+    font-size: 15px;
+    color: black;
+    background-color: #FFC102;
+    text-align: center;
+    margin-top: 13vh;
+}
+
+.col-sm-4 {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    line-height: 1.2;
+    color: white;
+    margin-bottom: 12px;
+}
+
+h3 {
+    text-align: center;
+    line-height: 0px;
+    color: #FFC102;
+}
+
+h4 {
+    text-align: center;
+    right: 50%;
+}
+
+.none {
+    display: none;
+}
+
+.none1 {
+    visibility: hidden;
+}
+
+.none2 {
+    visibility: hidden;
+}
+
+.none3 {
+    visibility: hidden;
+}
+
+.none4 {
+    visibility: hidden;
+}
+
+.none5 {
+    visibility: hidden;
+}
+
+.none1 img {
+    z-index: 300;
+}
+
+.none2 img {
+    z-index: 300;
+}
+
+.none3 img {
+    z-index: 300;
+}
+
+.none4 img {
+    z-index: 300;
+}
+
+.none5 img {
+    z-index: 300;
+}
+
+.block {
+    display: block;
+}
+
+.block1 {
+    visibility: visible;
+    text-align: center;
+}
+
+ul {
+    padding: 0px;
+    text-align: center;
+}
+
+.navpos {
+    margin: 1em;
+    left: 0px;
+    top: 48%;
+    bottom: 45%;
+    z-index: 600;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 60px;
+    transition: 1s;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.navpos:after,
+.navpos:before,
+.navpos div {
+    border-radius: 3px;
+    content: '';
+    display: block;
+    height: 5px;
+    margin: 4px 0;
+    transition: all .2s ease-in-out;
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.ytlogo {
+    margin-top: -60px;
+    margin-right: 15px;
+}
+
+nav li a {
+    float: right;
+    margin-right: 60px;
+    margin-top: -55px;
+}
+
+nav ul li {
+    text-align: center;
+}
+
+.teamname img {
+    text-align: center;
+    margin-left: 39vw;
+    margin-bottom: 30vh;
+    margin-top: -5vh;
+    opacity: 0.5;
+    height: 300px;
+    width: 300px;
+}
+
+nav ul li a {
+    color: #FFC102;
+}
+
+nav ul li a img {
+    text-align: center;
+}
+
+nav ul li a:nth-child(1) {
+    float: none;
+    margin-right: 0px;
+}
+
+.imgmarg {
+    margin-left: 180px;
+    height: 125px;
+    width: 125px;
+}
+
+.navpos:hover:before {
+    transform: translateY(10px) rotate(135deg);
+    background-color: #FFC102;
+}
+
+.navpos:hover:after {
+    transform: translateY(-10px) rotate(-135deg);
+    background-color: #FFC102;
+}
+
+.navpos:hover div {
+    transform: scale(0);
+}
+
+.navpostrans {
+    margin: 1em;
+    left: 0px;
+    top: 2%;
+    bottom: 91%;
+    z-index: 600;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 60px;
+    transition: 1s;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.navpostrans:after,
+.navpostrans:before,
+.navpostrans div {
+    border-radius: 3px;
+    content: '';
+    display: block;
+    height: 5px;
+    margin: 4px 0;
+    transition: all .2s ease-in-out;
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.navpostrans:hover:before {
+    transform: translateY(10px) rotate(135deg);
+    background-color: #FFC102;
+}
+
+.navpostrans:hover:after {
+    transform: translateY(-10px) rotate(-135deg);
+    background-color: #FFC102;
+}
+
+.navpostrans:hover div {
+    transform: scale(0);
+}
+
+.navpos1 {
+    background-image: url('navbarlogo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #FFC102;
+    background-position: center;
+    height: 100%;
+    border-radius: 60px;
+}
+
+.vertnav {
+    width: 0%;
+    height: 100%;
+    transition: 1s;
+}
+
+.hr:hover {
+    color: #FFC102;
+}
+
+.hr a {
+    color: black;
+    text-decoration: none;
+    font-size: 28px;
+    text-align: center;
+}
+
+#butons {
+    width: 100%;
+    text-align: center;
+    padding-top: 15vh;
+    padding-bottom: 20vh;
+}
+
+.fixheight2 a {
+    text-decoration: none;
+    color: black;
+}
+
+.fixheight2 a:hover {
+    text-decoration: none;
+    color: #FFC102;
+}
+
+ul {
+    padding-top: 10%;
+}
+
+ul li {
+    line-height: 1.4;
+}
+
+.hr li:hover:after,
+.hr li:hover:before {
+    border-radius: 3px;
+    content: '';
+    display: block;
+    height: 3px;
+    margin: 4px 0;
+    background-color: rgba(0, 0, 0, 1);
+    transition: 2s;
+}
+
+.mynav {
+    position: fixed;
+    right: 75%;
+    left: 0px;
+    top: 0%;
+    height: 69.5vh;
+    background-color: #FFC102;
+    width: 25%;
+    transition: 1s;
+    visibility: visible;
+    z-index: 500;
+}
+
+.fixheight1 {
+    height: 48vh;
+}
+
+body ul {
+    padding: 0px;
+    width: 100%;
+}
+
+.teamname {
+    padding-top: 20vh;
+}
+
+video#bgVideo {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    min-width: 100%;
+    max-height: 100vh;
+    z-index: -1;
+}
+
+.col-sm-2 {
+    text-align: center;
+}
+
+.deptnavpos {
+    bottom: 21%;
+    z-index: 100;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 60px;
+    transition: 1s;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    left: 48%;
+    right: 52%;
+    margin: 0px;
+}
+
+.deptnavpos:after,
+.deptnavpos:before,
+.deptnavpos div {
+    border-radius: 3px;
+    content: '';
+    display: block;
+    height: 5px;
+    margin: 4px 0;
+    transition: all .2s ease-in-out;
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.deptnavpos:before {
+    transform: translateY(9px) translateX(-8px) rotate(135deg) scale(0.8);
+    background-color: black;
+}
+
+.deptnavpos:after {
+    transform: translateY(-10px) translateX(8px) rotate(-135deg) scale(0.8);
+    background-color: black;
+}
+
+.deptnavpos:hover:before {
+    transform: translateY(9px) translateX(-8px) rotate(135deg) scale(0.8);
+    background-color: #FFC102;
+}
+
+.deptnavpos:hover:after {
+    transform: translateY(-10px) translateX(8x) rotate(-135deg) scale(0.8);
+    background-color: #FFC102;
+}
+
+.deptnavpos div {
+    transform: scale(0);
+}
+
+.deptnavpostrans {
+    left: 48%;
+    right: 52%;
+    bottom: 30%;
+    z-index: 100;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 60px;
+    transition: 1s;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 16px;
+}
+
+.deptnavpostrans:after,
+.deptnavpostrans:before,
+.deptnavpostrans div {
+    border-radius: 3px;
+    content: '';
+    display: block;
+    height: 5px;
+    margin: 4px 0;
+    transition: all .2s ease-in-out;
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.deptnavpostrans:hover:before {
+    transform: translateY(10px) rotate(135deg);
+    background-color: #FFC102;
+}
+
+.deptnavpostrans:hover:after {
+    transform: translateY(-10px) rotate(-135deg);
+    background-color: #FFC102;
+}
+
+.deptnavpostrans div {
+    transform: scale(0);
+}
+
+.deptnavpostrans:before {
+    transform: translateY(10px) rotate(135deg);
+    background-color: #FFC102;
+}
+
+.deptnavpostrans:after {
+    transform: translateY(-10px) rotate(-135deg);
+    background-color: #FFC102;
+}
+
+.deptnavpostrans div {
+    transform: scale(0);
+}
+
+.instalogo {
+    height: 40px;
+    width: 40px;
+    margin-right: 30px;
+}
+
+.ytlogoimg {
+    height: 50px;
+    width: 60px;
+}
+
+footer {
+    margin-top: 23.5vh;
+    height: 19.8vh;
+    display: block;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(32, 31, 31, 0.4);
+    font-size: 12px;
+}
+
+.social-media {
+    float: right;
+    margin-right: 40px;
+    margin-top: 20px;
+}
+
+.copy {
+    padding-top: 15vh;
+}
+
+.footerdisplay {
+    display: none;
+}
+
+.nbspan {
+    color: white;
+    font-size: x-large;
+}
+
+.nb1span {
+    color: #FFC102;
+    font-size: large;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media screen and (max-width: 850px) {
+    .hr {
+        font-size: 22px;
+    }
+    .hr a {
+        font-size: 22px;
+    }
+    .teamname img {
+        margin-left: 250px;
+    }
+}
+
+@media screen and (max-width: 766px) {
+    .vertnav {
+        width: 40%;
+        height: 0%;
+        transition: 1s;
+    }
+    .mynav {
+        position: fixed;
+        right: 75%;
+        left: 0px;
+        top: 0%;
+        height: 100%;
+        background-color: #FFC102;
+        width: 100%;
+        transition: 1s;
+        visibility: visible;
+        font-size: 15px;
+        z-index: 200;
+    }
+    .hr {
+        color: black;
+        text-decoration: none;
+        font-size: 20px;
+        text-align: center;
+        z-index: 200;
+    }
+    .hr a {
+        color: black;
+        text-decoration: none;
+        font-size: 20px;
+        text-align: center;
+    }
+    h1 {
+        font-size: 30px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+    #butons {
+        padding-top: 20vh;
+    }
+    ul li {
+        line-height: 2.5;
+    }
+    .navpos {
+        top: 0px;
+        height: 50px;
+        width: 50px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        background-color: rgba(0, 0, 0, 0);
+        z-index: 201;
+        margin-top: 5px;
+    }
+    body button:hover {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    .none1 {
+        visibility: visible;
+    }
+    .none2 {
+        visibility: visible;
+    }
+    .none3 {
+        visibility: visible;
+    }
+    .none4 {
+        visibility: visible;
+    }
+    .none5 {
+        visibility: visible;
+    }
+    .navpos:after,
+    .navpos:before,
+    .navpos div {
+        border-radius: 3px;
+        content: '';
+        display: block;
+        height: 4px;
+        margin: 4px 0;
+        transition: all .2s ease-in-out;
+        background-color: rgba(255, 255, 255, 1);
+    }
+    .navpostrans {
+        top: 0px;
+        height: 50px;
+        width: 50px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        background-color: rgba(0, 0, 0, 0);
+        z-index: 201;
+    }
+    div div div button:hover {
+        background-color: black;
+    }
+    .navpostrans:after,
+    .navpostrans:before,
+    .navpostrans div {
+        border-radius: 3px;
+        content: '';
+        display: block;
+        height: 5px;
+        margin: 4px 0;
+        transition: all .2s ease-in-out;
+        background-color: rgba(0, 0, 0, 1);
+    }
+    .navpos:hover:before {
+        transform: translateY(10px) rotate(135deg);
+        background-color: black;
+    }
+    .navpos:hover:after {
+        transform: translateY(-10px) rotate(-135deg);
+        background-color: black;
+    }
+    .navpostrans div {
+        transform: scale(0);
+    }
+    .navpostrans:before {
+        transform: translateY(10px) rotate(135deg);
+        background-color: black;
+    }
+    .navpostrans:after {
+        transform: translateY(-10px) rotate(-135deg);
+        background-color: black;
+    }
+    .navpos:hover div {
+        transform: scale(0);
+    }
+    .deptnavpos {
+        display: none;
+    }
+    .deptnavpostrans {
+        display: none;
+    }
+    .fixheight2 {
+        height: 30vh;
+    }
+    .imgmarg {
+        margin-left: 100px;
+        height: 80px;
+        width: 80px;
+    }
+    .instalogo {
+        height: 25px;
+        width: 25px;
+        margin-right: 0px;
+    }
+    .ytlogo {
+        margin-right: 40px;
+        margin-top: -50px;
+    }
+    .nbspan {
+        font-size: large;
+        margin-left: 10px;
+        height: 25px;
+    }
+    .nb1span {
+        font-size: small;
+        margin-left: 0px;
+    }
+    .teamname {
+        padding-top: 0vh;
+    }
+    .teamname img {
+        height: 200px;
+        width: 200px;
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-bottom: 100px;
+        margin-top: 8vh;
+    }
+    .ytlogoimg {
+        height: 34px;
+        width: 40px;
+    }
+    nav li a {
+        margin-right: 10px;
+        margin-top: -50px;
+    }
+    footer {
+        margin-top: 120vh;
+        font-size: x-small;
+        display: block;
+        bottom: 0px;
+        text-align: center;
+    }
+    .footerdisplay {
+        display: block;
+    }
+    .social-media {
+        float: right;
+        margin-right: 20px;
+        margin-top: 10px;
+    }
+    .hr li:hover:after,
+    .hr li:hover:before {
+        display: none;
+    }
+}

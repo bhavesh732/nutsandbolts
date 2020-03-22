@@ -1,0 +1,147 @@
+.container-fluid .row a {
+    width: 50%;
+}
+
+.col-sm-3 {
+    height: 50vh;
+    width: 100%;
+    background-image: url(../resources/760x360.jpg);
+}
+
+footer {
+    margin-top: 0px;
+}
+
+.logo {
+    margin-left: 180px;
+    margin-top: 5px;
+    height: 55px;
+    width: 120px;
+}
+
+nav {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.mynav {
+    height: 100vh;
+}
+
+#butons {
+    padding-top: 25vh;
+}
+
+.memb {
+    height: 5vh;
+    /* box-shadow: 0 2px 4px -1px #ffc102; */
+}
+
+.memb ul,
+.memb ul li a {
+    height: 100%;
+}
+
+.butt {
+    border-radius: 2px;
+    background-color: #ffc00200;
+    height: 100%;
+    margin: 0px;
+}
+
+.nav-a {
+    background-color: black;
+    border-top: 2px solid #ffc102;
+}
+
+nav ul li button a {
+    text-decoration: none;
+    height: 100%;
+}
+
+nav ul li button a:hover {
+    text-decoration: none;
+    color: white;
+    margin: 0px;
+    background-color: black;
+}
+
+nav ul li button:hover {
+    background-color: black;
+}
+
+nav ul li strong span span {
+    font-size: 40px;
+    color: white;
+}
+
+.ytlogo {
+    margin-top: 7px;
+}
+
+.instalogo {
+    margin-top: 10px;
+}
+
+.mainspan {
+    margin-left: 160px;
+}
+
+nav ul li a:nth-child(2) {
+    margin-top: 0px;
+    margin-right: 10px;
+}
+
+nav ul li strong span {
+    font-size: 40px;
+    color: #ffc102;
+}
+
+
+/* @media screen and (max-width: 850px){
+
+    .row{
+        width: 100%;
+    }
+
+    .col-sm-3{
+        width: 50%;
+    }
+} */
+
+@media screen and (max-width: 766px) {
+    .logo {
+        margin-left: 90px;
+        height: 44px;
+        width: 100px;
+    }
+    nav ul li a:nth-child(2) {
+        margin-top: 0px;
+        margin-right: 20px;
+    }
+    .butt {
+        padding: 0px 10px;
+    }
+    nav ul li strong span {
+        font-size: x-large;
+    }
+    nav ul li strong span span {
+        font-size: x-large;
+    }
+    .mainspan {
+        margin-left: -30px;
+    }
+    .ytlogo {
+        margin-right: 10px;
+        margin-top: 5px;
+    }
+    nav ul li button a {
+        text-decoration: none;
+        height: 100%;
+        font-size: small;
+    }
+    nav ul li button a:hover {
+        text-decoration: none;
+        color: white;
+        margin: 0px;
+    }
+}
