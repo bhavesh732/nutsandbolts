@@ -12,6 +12,14 @@ footer {
     margin-top: 0px;
 }
 
+.error {
+    color: red;
+}
+
+.error span {
+    font-size: small;
+}
+
 .logo {
     margin-left: 180px;
     margin-top: 5px;
@@ -31,7 +39,7 @@ input {
     border-radius: 3px;
     border: 1px solid black;
     margin: 3px;
-    width: 80%;
+    width: 80vh;
 }
 
 nav ul li strong span span {
@@ -91,11 +99,16 @@ select {
 .formbutton {
     display: block;
     margin: 5px;
-    margin-left: 170px;
+    margin-left: 450px;
+    align-content: center;
 }
 
 .submitbutton {
     background-color: #ffc102;
+}
+
+span br {
+    display: none;
 }
 
 @media screen and (max-width: 850px) {
@@ -142,5 +155,11 @@ select {
     }
     .formbutton {
         display: none;
+    }
+    input {
+        width: 50vh;
+    }
+    span br {
+        display: block;
     }
 }
