@@ -19,6 +19,10 @@ footer {
     background-color: #ffc102;
 }
 
+.col-sm-3 {
+    text-align: center;
+}
+
 .row .col-sm-3:nth-child(1) {
     padding-left: 5px;
 }
@@ -41,6 +45,15 @@ footer {
 .container-fluid {
     padding-left: 5px;
     padding-right: 5px;
+}
+
+.section1 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section {
+    display: none;
 }
 
 .logo {
@@ -85,6 +98,35 @@ nav ul li strong span {
     color: #ffc102;
 }
 
+.col-sm-3 .row:nth-child(2) div:nth-child(1) {
+    font-size: larger;
+}
+
+.col-sm-3 .row:nth-child(2) div:nth-child(2) {
+    font-size: smaller;
+    margin-top: -5px;
+}
+
+.col-sm-3 .row:nth-child(2) div:nth-child(3) {
+    font-size: small;
+}
+
+@media screen and (max-width: 850px) {
+    .col-sm-3 .row:nth-child(2) div:nth-child(1) {
+        font-size: 15px;
+    }
+    .col-sm-3 .row:nth-child(2) div:nth-child(2) {
+        font-size: 12px;
+        margin-top: 0px;
+    }
+    .col-sm-3 .row:nth-child(2) div:nth-child(3) {
+        font-size: 10px;
+    }
+    .col {
+        padding: 0px;
+    }
+}
+
 @media screen and (max-width: 766px) {
     .logo {
         margin-left: 90px;
@@ -121,5 +163,15 @@ nav ul li strong span {
     .row .col-sm-3:nth-child(1) {
         padding-top: 5px;
         margin-top: 0px;
+    }
+    .col-sm-3 .row:nth-child(2) div:nth-child(1) {
+        font-size: larger;
+    }
+    .col-sm-3 .row:nth-child(2) div:nth-child(2) {
+        font-size: smaller;
+        margin-top: -5px;
+    }
+    .col-sm-3 .row:nth-child(2) div:nth-child(3) {
+        font-size: small;
     }
 }

@@ -187,6 +187,11 @@ ul {
     background-color: rgba(0, 0, 0, 1);
 }
 
+.ytlogo1 {
+    margin-top: -60px;
+    margin-right: 15px;
+}
+
 .ytlogo {
     margin-top: -60px;
     margin-right: 15px;
@@ -380,6 +385,67 @@ video#bgVideo {
     text-align: center;
 }
 
+.tothetop {
+    bottom: 5px;
+    right: 5px;
+    z-index: 100;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    background-color: #FFC102;
+    border-radius: 60px;
+    transition: 1s;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin: 0px;
+}
+
+.tothetop:hover {
+    background-color: black;
+}
+
+.tothetop:after,
+.tothetop:before,
+.tothetop div {
+    border-radius: 3px;
+    content: '';
+    display: block;
+    height: 5px;
+    margin: 4px 0;
+    transition: all .2s ease-in-out;
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.tothetop:before {
+    transform: translateY(4px) translateX(-8px) rotate(135deg) scale(0.8);
+    background-color: black;
+}
+
+.tothetop:after {
+    transform: translateY(-15px) translateX(8px) rotate(-135deg) scale(0.8);
+    background-color: black;
+}
+
+.tothetop:hover:before {
+    transform: translateY(4px) translateX(-8px) rotate(135deg) scale(0.8);
+    background-color: #FFC102;
+}
+
+.tothetop:hover:after {
+    transform: translateY(-15px) translateX(8x) rotate(-135deg) scale(0.8);
+    background-color: #FFC102;
+}
+
+.tothetop div {
+    transform: rotate(90deg);
+}
+
+.tothetop:hover div {
+    transform: rotate(90deg);
+    background-color: #FFC102;
+}
+
 .deptnavpos {
     bottom: 21%;
     z-index: 100;
@@ -513,8 +579,12 @@ footer {
 
 .social-media {
     float: right;
-    margin-right: 40px;
+    /* margin-right: 40px; */
     margin-top: 20px;
+}
+
+.instafooter {
+    margin-right: 15px;
 }
 
 .copy {
@@ -537,6 +607,10 @@ footer {
 
 a {
     text-decoration: none;
+}
+
+.ytfooter {
+    margin-top: -2.5px;
 }
 
 @media screen and (max-width: 850px) {
@@ -696,10 +770,10 @@ a {
     .instalogo {
         height: 25px;
         width: 25px;
-        margin-right: 0px;
+        margin-right: 10px;
     }
-    .ytlogo {
-        margin-right: 40px;
+    .ytlogo1 {
+        margin-right: 45px;
         margin-top: -50px;
     }
     .nbspan {
@@ -725,10 +799,17 @@ a {
     .ytlogoimg {
         height: 34px;
         width: 40px;
+        margin-right: 10px;
     }
     nav li a {
         margin-right: 10px;
         margin-top: -50px;
+    }
+    .tothetop {
+        height: 45px;
+        width: 45px;
+        bottom: 30px;
+        right: 20px;
     }
     footer {
         margin-top: 120vh;
@@ -742,11 +823,52 @@ a {
     }
     .social-media {
         float: right;
-        margin-right: 20px;
-        margin-top: 10px;
+        margin-right: 0px;
+        margin-top: 5px;
     }
     .hr li:hover:after,
     .hr li:hover:before {
         display: none;
+    }
+    .ytfooter {
+        margin-top: -0.5px;
+        margin-right: 0px;
+    }
+    .tothetop:before {
+        transform: translateY(2px) translateX(-5px) rotate(135deg) scale(0.8);
+        background-color: black;
+    }
+    .tothetop:after {
+        transform: translateY(-16px) translateX(6px) rotate(-135deg) scale(0.8);
+        background-color: black;
+    }
+    .tothetop:hover {
+        transform: none;
+        background-color: #FFC102;
+    }
+    .tothetop:hover:before {
+        transform: translateY(2px) translateX(-5px) rotate(135deg) scale(0.8);
+        background-color: black;
+    }
+    .tothetop:hover:after {
+        transform: translateY(-16px) translateX(6px) rotate(-135deg) scale(0.8);
+        background-color: black;
+    }
+    .tothetop div {
+        transform: translateX(0.3px)translateY(2px)rotate(90deg);
+    }
+    .tothetop:hover div {
+        background-color: black;
+    }
+    .ytlogo {
+        margin-right: 0px;
+        margin-top: -4px;
+    }
+    .ytfooter {
+        margin-right: 0px;
+    }
+    .social-media {
+        margin-right: 0px;
+        margin-top: 5px;
     }
 }

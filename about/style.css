@@ -71,10 +71,29 @@ nav ul li strong span {
         font-size: x-large;
     }
     .mainspan {
-        margin-left: -80px;
+        margin-left: -40px;
     }
     .ytlogo {
         margin-right: 10px;
         margin-top: 5px;
     }
+    .ytlogo {
+        margin-right: 0px;
+        margin-top: 5px;
+    }
+    .ytfooter {
+        margin-right: 0px;
+    }
+    .social-media {
+        margin-right: 10px;
+        margin-top: 5px;
+    }
+}
+
+.ytfooter {
+    margin-right: 0px;
+}
+
+.social-media {
+    margin-right: 20px;
 }

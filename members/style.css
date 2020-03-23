@@ -33,7 +33,6 @@ nav {
 
 .memb {
     height: 5vh;
-    /* box-shadow: 0 2px 4px -1px #ffc102; */
 }
 
 .memb ul,
@@ -55,6 +54,10 @@ nav {
 
 nav ul li button a {
     text-decoration: none;
+    height: 100%;
+}
+
+nav ul li {
     height: 100%;
 }
 
@@ -147,4 +150,34 @@ nav ul li strong span {
     #butons {
         padding-top: 20vh;
     }
+    .ytlogo {
+        margin-right: 0px;
+        margin-top: 5px;
+    }
+    .ytfooter {
+        margin-right: 0px;
+    }
+    .social-media {
+        margin-right: 10px;
+        margin-top: 5px;
+    }
+    .ytlogo {
+        margin-right: 0px;
+        margin-top: 5px;
+    }
+    .ytfooter {
+        margin-right: 0px;
+    }
+    .social-media {
+        margin-right: 10px;
+        margin-top: 5px;
+    }
+}
+
+.ytfooter {
+    margin-right: 0px;
+}
+
+.social-media {
+    margin-right: 20px;
 }

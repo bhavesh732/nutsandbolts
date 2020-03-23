@@ -27,8 +27,8 @@
             <li>
                 <!-- <a><img src="mime.png" class="logo"></a> -->
                 <strong class="mainspan"><span>REGISTR<span class="logspan">ATIONS</span></span></strong>
-                <a href="instagram.com"> <img src="../resources/insta.png" alt="" class="instalogo"> </a>
-                <a href="instagram.com" class="ytlogo"> <img src="../resources/youtube.png" alt="" class="ytlogoimg">
+                <a href="https://www.instagram.com/nuts_and_bolts_productions/"> <img src="./resources/insta.png" alt="" class="instalogo"> </a>
+                <a href="https://www.youtube.com/channel/UC65klpXc13tz-rnsZb9UIrg" class="ytlogo1"> <img src="./resources/youtube.png" alt="" class="ytlogoimg">
                 </a>
             </li>
         </ul>
@@ -51,14 +51,15 @@
         </div>
     </div>
 
-    <?php 
-        include('./first.php');
+    <?php
+    include('./first.php');
     ?>
     <footer class="container-fluid">
         <div class="social-media row">
-            <a href="https://www.instagram.com/">
-                <img src="../resources/insta.png" class="instalogo" alt="Instagram">
+            <a href="https://www.instagram.com/nuts_and_bolts_productions/">
+                <img src="../resources/insta.png" class="instalogo instafooter" alt="Instagram">
             </a>
+            <a href="https://www.youtube.com/channel/UC65klpXc13tz-rnsZb9UIrg" class="ytlogo ytfooter"> <img src="../resources/youtube.png" alt="" class="ytlogoimg ytfooter"></a>
         </div>
         <div class="copy">
             Copyright &copy; &lt;NUTS AND BOLTS PRODUCTIONS&gt;. All rights reserved.<br> Created by Media team NUTS AND BOLTS PRODUCTIONS and <a href="https://www.instagram.com/ctrlalt.create_/" style="color: #FFC102;">CTRL+ALT+CREATE</a>

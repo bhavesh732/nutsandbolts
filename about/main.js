@@ -1,6 +1,6 @@
 var links = document.getElementsByClassName('hr');
 for (var i = 0; i < links.length; i++) {
-    window.addEventListener("hashchange", function () {
+    window.addEventListener("hashchange", function() {
         var hash1 = location.hash.substr(1);
         if (hash1 != 'sec1') {
             var active = document.getElementById('sec1');
@@ -38,3 +38,22 @@ cn.addEventListener('click', () => {
     cn.classList.toggle('navpostrans');
     bu.classList.toggle('block');
 });
+
+var mybutton = document.getElementById("tothetop");
+
+window.onscroll = function() {
+    scrollFunction()
+};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+}
+
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}

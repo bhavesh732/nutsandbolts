@@ -165,4 +165,23 @@ span br {
     #butons {
         padding-top: 20vh;
     }
+    .ytlogo {
+        margin-right: 0px;
+        margin-top: 5px;
+    }
+    .ytfooter {
+        margin-right: 0px;
+    }
+    .social-media {
+        margin-right: 10px;
+        margin-top: 5px;
+    }
+}
+
+.ytfooter {
+    margin-right: 0px;
+}
+
+.social-media {
+    margin-right: 20px;
 }
