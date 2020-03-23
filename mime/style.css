@@ -63,6 +63,8 @@ footer {
 
 .container-fluid {
     padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .row .col-sm-4:nth-child(2) {
@@ -72,7 +74,7 @@ footer {
 .col-sm-4 {
     padding-left: 5px;
     padding-right: 5px;
-    margin-top: 5px;
+    margin: 5px 0px;
 }
 
 .col-sm-4 a:nth-child(1) .col-sm-12 div {
@@ -231,5 +233,8 @@ nav ul li strong span {
     .social-media {
         margin-right: 10px;
         margin-top: 5px;
+    }
+    .col-sm-4 {
+        margin: 5px;
     }
 }
