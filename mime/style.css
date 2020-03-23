@@ -40,11 +40,11 @@ footer {
     padding-top: 20px;
 }
 
-.col-sm-4:nth-child(1):hover {
+.col-sm-4:nth-child(3n+1):hover {
     left: 50px;
 }
 
-.col-sm-4:nth-child(3):hover {
+.col-sm-4:nth-child(3n+3):hover {
     right: 50px;
 }
 
@@ -204,10 +204,10 @@ nav ul li strong span {
         z-index: 10000000;
         transition: 0s;
     }
-    .col-sm-4:nth-child(1):hover {
+    .col-sm-4:nth-child(3n+1):hover {
         left: 0px;
     }
-    .col-sm-4:nth-child(3):hover {
+    .col-sm-4:nth-child(3n+3):hover {
         right: 0px;
     }
     .col-sm-4 a:nth-child(1) .col-sm-12 div {
