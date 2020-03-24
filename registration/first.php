@@ -111,7 +111,7 @@
 					<input id="conno" type="text" name="ContactNumber" placeholder="Contact Number" required>*<span><br><?php echo $error ?></span><br>
 					<input id="regno" type="text" name="Regno" placeholder="Registration Number" required>*<span><br><?php echo $rerror ?></span><br>
 					<input id="class" type="text" name="Class" placeholder="Class" required>*<span><br><?php echo $error ?></span><br>
-					<input id="email" type="text" name="Email" placeholder="E-Mail" required>*<span><br><?php echo $emailErr ?></span><br>
+					<input id="email" type="text" name="Email" placeholder="Christ E-Mail" required>*<span><br><?php echo $emailErr ?></span><br>
 					<button class="formbutton">Choose your Categories</button>
 					<select id="category" class="formselect" name="Category" size="6" multiple required>
 						<option value="Cat" disabled selected hidden>Choose your Categories</option>

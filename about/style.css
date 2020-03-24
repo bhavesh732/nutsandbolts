@@ -8,6 +8,31 @@
     background-image: url(../resources/760x360.jpg);
 }
 
+h1 {
+    color: #ffc102;
+    font-weight: bolder;
+    margin-top: 10px;
+}
+
+p {
+    padding: 5vh;
+    color: white;
+    text-align: left;
+}
+
+.img-fluid {
+    width: 60%;
+    padding: 10px;
+    align-content: flex-start;
+    border: 3px solid #ffc102;
+}
+
+h2 {
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+}
+
 footer {
     margin-top: 0px;
 }
@@ -54,6 +79,20 @@ nav ul li strong span {
     color: #ffc102;
 }
 
+@media screen and (max-width: 850px) {
+    .headerintro {
+        margin-top: 2.5vh;
+    }
+    .img-fluid {
+        width: 100%;
+        padding: 0px;
+        align-content: flex-start;
+    }
+    p {
+        padding: 2vh;
+    }
+}
+
 @media screen and (max-width: 766px) {
     .logo {
         margin-left: 90px;
@@ -87,6 +126,15 @@ nav ul li strong span {
     .social-media {
         margin-right: 10px;
         margin-top: 5px;
+    }
+    h2 {
+        font-size: large;
+    }
+    h1 {
+        font-size: x-large;
+    }
+    .headerintro {
+        margin-top: 10px;
     }
 }
 
