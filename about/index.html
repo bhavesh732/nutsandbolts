@@ -14,12 +14,12 @@
 </head>
 
 <body id="bod">
-    <!-- <video id="bgVideo" autoplay loop poster="">
-            <source src="present.mp4" type="video/mp4">
-        </video>
-         -->
     <button class="navpos" id="circlenav">
         <div id="navdiv"></div>
+    </button>
+
+    <button class="tothetop" onclick="topFunction()" id="tothetop" style="display: none;">
+        <div id=""></div>
     </button>
 
     <nav class="navbar">
@@ -52,11 +52,13 @@
     </div>
 
     <div class="container-fluid">
-        <div class="row" id="we">
-            <div class="col-sm-12">
+        <div class="row">
+            <div class="col-sm-12 mainanimationwe" id="we">
                 <h1>WE ARE TEAM NUTS AND BOLTS</h1>
             </div>
-            <div class="col-sm-12" id="and">
+        </div>
+        <div class="row ">
+            <div class="col-sm-12 mainanimationand" id="and" style="visibility: hidden;">
                 <h2>AND WE LOVE THEATRE!!!</h2>
             </div>
         </div>
@@ -70,7 +72,15 @@
                     amet consectetur adipisicing elit. Tenetur illum natus eligendi quis nihil omnis, dolorum voluptatem eveniet facere quod? Saepe voluptates, incidunt quo reprehenderit odit tempore perferendis et ipsam.</p>
             </div>
             <div class="col-sm-6 headerintro">
-                <img src="./resources/team.jpg" class="img-fluid">
+                <img id="teamimg" src="./resources1/team.jpg" class="img-fluid">
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid margtop">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1 class="h11">MEDIA <span style="color: white;">TEAM</span></h1>
             </div>
         </div>
     </div>
@@ -86,6 +96,7 @@
         </div>
     </footer>
     <script src="./main.js"></script>
+    <script src="./effects.js"></script>
 </body>
 
 </html>
