@@ -78,11 +78,62 @@ nav ul li strong span {
     font-size: xx-large;
     font-weight: 900;
     font-style: italic;
+    text-align: left;
+    padding-top: 4vh;
+    color: white;
+    font-size: 50px;
+}
+
+.h11 span {
+    text-align: right;
+    color: black;
+    background-color: #ffc102;
+    padding-left: 140px;
+    padding-right: 10px;
 }
 
 .fluids {
     display: flex;
     flex-wrap: wrap;
+}
+
+.col-sm-4 .img-fluid {
+    width: 100%;
+    border: 20px solid white;
+}
+
+.col-sm-4:nth-child(odd):hover {
+    transform: none;
+    z-index: 90000;
+}
+
+.col-sm-4:nth-child(even):hover {
+    transform: none;
+    z-index: 90000;
+}
+
+.margtop .col-sm-4 {
+    padding: 0px;
+}
+
+.margtop1 .col-sm-4 {
+    padding: 0px;
+}
+
+.col-sm-4:nth-child(even) {
+    transform: rotate(5deg);
+}
+
+.col-sm-4:nth-child(3n+2) {
+    transform: rotate(7deg);
+}
+
+.col-sm-4:nth-child(odd) {
+    transform: rotate(-5deg);
+}
+
+.margtop1 {
+    margin-top: 10vh;
 }
 
 @keyframes mainanimation {
@@ -129,6 +180,16 @@ nav ul li strong span {
     }
     .margtop {
         margin-top: 0px;
+    }
+    .margtop1 {
+        margin-top: 10vh;
+    }
+    .h11 {
+        font-size: xx-large;
+        padding-top: 4vh;
+    }
+    .h11 span {
+        padding-left: 80px;
     }
 }
 
@@ -189,7 +250,41 @@ nav ul li strong span {
     .h11 {
         font-size: xx-large;
         font-weight: 900;
+        text-align: center;
+        padding-top: 3vh;
     }
+    .h11 br {
+        display: none;
+    }
+    .h11 span {
+        padding-left: 0px;
+    }
+    .col-sm-4:nth-child(odd):hover {
+        transform: none;
+    }
+    .col-sm-4:nth-child(even):hover {
+        transform: none;
+    }
+    .col-sm-4:nth-child(even) {
+        transform: rotate(5deg);
+    }
+    .col-sm-4:nth-child(odd) {
+        transform: rotate(-5deg);
+    }
+    .col-sm-4 .img-fluid {
+        width: 95%;
+        border: 15px solid white;
+    }
+    .margtop1 {
+        margin-top: 0vh;
+    }
+}
+
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .ytfooter {
