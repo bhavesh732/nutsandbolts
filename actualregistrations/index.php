@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+Upload Your Script IdeasDOCTYPE html>
 <html lang="en" style="scroll-behavior: smooth;">
 
 <head>
@@ -39,7 +39,7 @@
             <ul type="none" style="width: 100%;" class="hr">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="../about/index.html">About Us</a></li>
-                <li><a href="../registration/index.php">Registrations</a></li>
+                <li><a href="../registration/index.php">Upload Your Script Ideas</a></li>
                 <li><a href="../mime/index.html">Mime</a></li>
                 <li><a href="../proscenium/index.html">Proscenium</a></li>
                 <li><a href="../streetplay/index.html">Street Play</a></li>

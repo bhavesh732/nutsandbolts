@@ -105,7 +105,7 @@
 
 		// echo "VALIDATOR = ".$validator;
 
-		if ($validator == 7) {
+		if ($validator >= 7) {
 			$fname = test_input($_POST['FirstName']);
 			$lname = test_input($_POST['LastName']);
 			$email = test_input($_POST['Email']);
@@ -116,6 +116,10 @@
 			$script = test_input($_POST["script"]);
 		}
 	}
+	?>
+
+	<?php 
+	// echo "VALIDATOR = ".$validator;
 	?>
 
 	<div class="container">
@@ -162,7 +166,8 @@
 			"Registration Number : " . $regno . "\n" .
 			"Class : " . $class . "\n" .
 			"E-Mail : " . $email . "\n" .
-			"Script Category : " . $playscript
+			"Script Category : " . $playscript."\n".
+			"Script : " . $script
 	);
 	?>
 
