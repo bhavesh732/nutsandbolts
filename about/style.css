@@ -92,6 +92,18 @@ nav ul li strong span {
     padding-right: 10px;
 }
 
+.col-sm-4 {
+    padding: 0px;
+}
+
+.col-sm-3 {
+    padding: 0px;
+}
+
+.col-sm-9 {
+    padding: 0px;
+}
+
 .fluids {
     display: flex;
     flex-wrap: wrap;

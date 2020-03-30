@@ -25,6 +25,11 @@ function scrollFunctiontop() {
     }
 }
 
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
 // imgscroll = document.getElementById("teamimg");
 
 // function imgfunction() {
