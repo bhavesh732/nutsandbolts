@@ -42,9 +42,9 @@ cn.addEventListener('click', () => {
 const fobu = document.querySelector('.formbutton');
 const fosel = document.querySelector('.formselect');
 
-// fobu.addEventListener('click', () => {
-//     fosel.classList.toggle('seldis');
-// });
+fobu.addEventListener('click', () => {
+    fosel.classList.toggle('seldis');
+});
 
 var mybutton = document.getElementById("tothetop");
 

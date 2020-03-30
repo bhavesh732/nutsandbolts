@@ -26,7 +26,7 @@
         <ul type="none">
             <li>
                 <!-- <a><img src="mime.png" class="logo"></a> -->
-                <strong class="mainspan"><span>SCRIPT<span class="logspan">IDEAS</span></span></strong>
+                <strong class="mainspan"><span>REGISTR<span class="logspan">ATIONS</span></span></strong>
                 <a href="https://www.instagram.com/nuts_and_bolts_productions/"> <img src="../resources/insta.png" alt="" class="instalogo"> </a>
                 <a href="https://www.youtube.com/channel/UC65klpXc13tz-rnsZb9UIrg" class="ytlogo"> <img src="../resources/youtube.png" alt="" class="ytlogoimg">
                 </a>
@@ -39,7 +39,7 @@
             <ul type="none" style="width: 100%;" class="hr">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="../about/index.html">About Us</a></li>
-                <li><a href="../registration/index.php">Submit Your Script</a></li>
+                <li><a href="../registration/index.php">Registrations</a></li>
                 <li><a href="../mime/index.html">Mime</a></li>
                 <li><a href="../proscenium/index.html">Proscenium</a></li>
                 <li><a href="../streetplay/index.html">Street Play</a></li>

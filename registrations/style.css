@@ -111,41 +111,6 @@ span br {
     display: none;
 }
 
-.radio {
-    padding: 0px;
-    width: 4vh;
-    text-align: left;
-}
-
-.radio1 {
-    text-align: left;
-    padding-left: 35vh;
-    color: white;
-}
-
-textarea {
-    font-size: xx-small;
-    height: 40vh;
-    width: 50vw;
-}
-
-.col {
-    font-size: large;
-    margin-bottom: 3vh;
-    margin-top: 3vh;
-    color: white;
-}
-
-.col span {
-    font-size: smaller;
-    color: #ffc102;
-}
-
-.col .error {
-    font-size: large;
-    color: red;
-}
-
 @media screen and (max-width: 850px) {
     h3 {
         font-size: 20px;
@@ -180,11 +145,6 @@ textarea {
     .mainspan {
         margin-left: 0px;
     }
-    .radio1 {
-        text-align: left;
-        padding-left: 5vh;
-        color: white;
-    }
     .ytlogo {
         margin-right: 10px;
         margin-top: 5px;
@@ -215,11 +175,6 @@ textarea {
     .social-media {
         margin-right: 10px;
         margin-top: 5px;
-    }
-    textarea {
-        height: 30vh;
-        width: 60vh;
-        font-size: small;
     }
 }
 
