@@ -58,7 +58,7 @@
     <div class="container-fluid">
 
         <?php 
-        include('main.txt')
+        include('main.html')
         ?>
         <!-- <div class="col-sm-4">
             <a href="">

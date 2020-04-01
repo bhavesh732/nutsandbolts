@@ -15,6 +15,10 @@ footer {
     margin-top: 0px;
 }
 
+input {
+    font-size: small;
+}
+
 .col-sm-4 a .row .col-sm-12,
 .col-sm-4 a {
     background-color: black;
@@ -73,10 +77,18 @@ footer {
     padding: 0px;
 }
 
+textarea {
+    font-size: medium;
+}
+
 .col-sm-4 {
     padding-left: 5px;
     padding-right: 5px;
     margin: 5px 0px;
+}
+
+.row {
+    width: 100%;
 }
 
 .col-sm-4 a:nth-child(1) .col-sm-12 div {
@@ -199,7 +211,7 @@ nav ul li strong span {
         padding-top: 30px;
     }
     .col-sm-12 .col {
-        font-size: small;
+        font-size: medium;
     }
     .col-sm-4:hover {
         transform: scale(1);
@@ -238,5 +250,11 @@ nav ul li strong span {
     }
     .col-sm-4 {
         margin: 5px;
+    }
+    h3 {
+        font-size: smaller;
+    }
+    footer div a:nth-child(1) {
+        margin-left: 20px;
     }
 }
