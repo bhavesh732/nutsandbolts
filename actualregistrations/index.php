@@ -54,7 +54,7 @@ Upload Your Script IdeasDOCTYPE html>
     <?php
     include('./first.php');
     ?>
-    <footer class="container-fluid">
+    <footer>
         <div class="social-media row">
             <a href="https://www.instagram.com/nuts_and_bolts_productions/">
                 <img src="../resources/insta.png" class="instalogo instafooter" alt="Instagram">
