@@ -57,7 +57,10 @@
 
     <div class="container-fluid">
 
-        <div class="col-sm-4">
+        <?php 
+        include('main.txt')
+        ?>
+        <!-- <div class="col-sm-4">
             <a href="">
                 <div class="row">
                     <div class="col-sm-12">
@@ -220,7 +223,7 @@
                     </div>
                 </div>
             </a>
-        </div>
+        </div> -->
 
     </div>
 
