@@ -31,7 +31,7 @@
         <ul type="none">
             <li>
                 <!-- <a><img src="mime.png" class="logo"></a> -->
-                <strong class="mainspan"><span>DAN<span class="logspan">CE</span></span></strong>
+                <strong class="mainspan"><span>STREET<span class="logspan">PLAY</span></span></strong>
                 <a href="https://www.instagram.com/nuts_and_bolts_productions/"> <img src="../resources/insta.png" alt="" class="instalogo"> </a>
                 <a href="https://www.youtube.com/channel/UC65klpXc13tz-rnsZb9UIrg" class="ytlogo"> <img src="../resources/youtube.png" alt="" class="ytlogoimg">
                 </a>
@@ -58,6 +58,11 @@
 
     <div class="container-fluid">
 
+        <?php
+        include('main.html')
+        ?>
+
+        <!-- 
         <div class="col-sm-4">
             <a href="">
                 <div class="row">
@@ -221,7 +226,7 @@
                     </div>
                 </div>
             </a>
-        </div>
+        </div> -->
 
     </div>
 
@@ -238,5 +243,7 @@
     </footer>
     <script src="./main.js"></script>
 </body>
+
+</html>
 
 </html>

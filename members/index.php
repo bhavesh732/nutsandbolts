@@ -70,6 +70,9 @@
         COMING SOON
     </div>
 
+    <?php
+    //include('main.html')
+    ?>
     <!-- 
     <div id="divsection1" style="background-color: black;">
         <div class="container-fluid section1" id="current">

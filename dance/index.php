@@ -31,7 +31,7 @@
         <ul type="none">
             <li>
                 <!-- <a><img src="mime.png" class="logo"></a> -->
-                <strong class="mainspan"><span>STREET<span class="logspan">PLAY</span></span></strong>
+                <strong class="mainspan"><span>DAN<span class="logspan">CE</span></span></strong>
                 <a href="https://www.instagram.com/nuts_and_bolts_productions/"> <img src="../resources/insta.png" alt="" class="instalogo"> </a>
                 <a href="https://www.youtube.com/channel/UC65klpXc13tz-rnsZb9UIrg" class="ytlogo"> <img src="../resources/youtube.png" alt="" class="ytlogoimg">
                 </a>
@@ -57,8 +57,10 @@
     </div>
 
     <div class="container-fluid">
-
-        <div class="col-sm-4">
+        <?php
+        include('main.html')
+        ?>
+        <!-- <div class="col-sm-4">
             <a href="">
                 <div class="row">
                     <div class="col-sm-12">
@@ -223,22 +225,20 @@
             </a>
         </div>
 
-    </div>
+    </div> -->
 
-    <footer>
-        <div class="social-media row">
-            <a href="https://www.instagram.com/nuts_and_bolts_productions/">
-                <img src="../resources/insta.png" class="instalogo instafooter" alt="Instagram">
-            </a>
-            <a href="https://www.youtube.com/channel/UC65klpXc13tz-rnsZb9UIrg" class="ytlogo ytfooter"> <img src="../resources/youtube.png" alt="" class="ytlogoimg ytfooter"></a>
-        </div>
-        <div class="copy">
-            Copyright &copy; &lt;NUTS AND BOLTS PRODUCTIONS&gt;. All rights reserved.<br> Created by Media team NUTS AND BOLTS PRODUCTIONS and <a href="https://www.instagram.com/ctrlalt.create_/" style="color: #FFC102;">CTRL+ALT+CREATE</a>
-        </div>
-    </footer>
-    <script src="./main.js"></script>
+        <footer>
+            <div class="social-media row">
+                <a href="https://www.instagram.com/nuts_and_bolts_productions/">
+                    <img src="../resources/insta.png" class="instalogo instafooter" alt="Instagram">
+                </a>
+                <a href="https://www.youtube.com/channel/UC65klpXc13tz-rnsZb9UIrg" class="ytlogo ytfooter"> <img src="../resources/youtube.png" alt="" class="ytlogoimg ytfooter"></a>
+            </div>
+            <div class="copy">
+                Copyright &copy; &lt;NUTS AND BOLTS PRODUCTIONS&gt;. All rights reserved.<br> Created by Media team NUTS AND BOLTS PRODUCTIONS and <a href="https://www.instagram.com/ctrlalt.create_/" style="color: #FFC102;">CTRL+ALT+CREATE</a>
+            </div>
+        </footer>
+        <script src="./main.js"></script>
 </body>
-
-</html>
 
 </html>
