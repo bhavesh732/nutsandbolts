@@ -24,8 +24,12 @@
         return $data;
     }
     $playname = $directorname = $dateofperfo = $fest = $position = $email = $participants = $synopsis = $festname = $positionname = $playnamenospace = "";
-    $playnameErr = $directornameErr = $emailErr = $error = $festerror = $participantsErr = $synopsisErr = $classErr = $playnamenospaceErr = "";
+    $playnameErr = $directornameErr = $emailErr = $error = $festerror = $participantsErr = $imgerr = $imgserr = $synopsisErr = $classErr = $playnamenospaceErr = "";
     $validator = 0;
+    $target_dir = "resources/";
+    $target_file = $target_dir . basename($_FILES["fileToUpload"][$playnamenospace . "name"]);
+    $uploadOk = 1;
+    $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -78,51 +82,94 @@
         } else {
             $validator = $validator + 1;
         }
-    }
 
-    if (empty($_POST["Fest"])) {
-        $festerror = "Fest's Name is required";
-        $validator = 0;
-    } else {
-        $festname = test_input($_POST["Fest"]);
-        // check if name only contains letters and whitespace
-        if (!preg_match("/^[a-zA-Z0-9 ]*$/", $festname)) {
-            $festerror = "Only letters,numbers and white space allowed";
+        if (empty($_POST["Fest"])) {
+            $festerror = "Fest's Name is required";
+            $validator = 0;
+        } else {
+            $festname = test_input($_POST["Fest"]);
+            // check if name only contains letters and whitespace
+            if (!preg_match("/^[a-zA-Z0-9 ]*$/", $festname)) {
+                $festerror = "Only letters,numbers and white space allowed";
+                $validator = 0;
+            } else {
+                $validator = $validator + 1;
+            }
+        }
+
+        if (empty($_POST["Position"])) {
+            $classErr = "Position is required";
+            $validator = 0;
+        } else {
+            $positionname = test_input($_POST["Fest"]);
+            // check if name only contains letters and whitespace
+            if (!preg_match("/^[a-zA-Z0-9 ]*$/", $positionname)) {
+                $classErr = "Only letters,numbers and white space allowed";
+                $validator = 0;
+            } else {
+                $validator = $validator + 1;
+            }
+        }
+
+        if (empty($_POST["participants"])) {
+            $synopsisErr = "List of Participants required";
             $validator = 0;
         } else {
             $validator = $validator + 1;
         }
-    }
 
-    if (empty($_POST["Position"])) {
-        $classErr = "Position is required";
-        $validator = 0;
-    } else {
-        $positionname = test_input($_POST["Fest"]);
-        // check if name only contains letters and whitespace
-        if (!preg_match("/^[a-zA-Z0-9 ]*$/", $positionname)) {
-            $classErr = "Only letters,numbers and white space allowed";
+        if (empty($_POST["synopsis"])) {
+            $synopsisErr = "Synopsis required";
             $validator = 0;
         } else {
             $validator = $validator + 1;
         }
+
+        if (isset($_POST["submit"])) {
+            $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+            if ($check !== false) {
+                echo "File is an image - " . $check["mime"] . ".";
+                $uploadOk = 1;
+            } else {
+                echo "File is not an image.";
+                $uploadOk = 0;
+            }
+        }
+        // Check if file already exists
+        if (file_exists($target_file)) {
+            $validator = 0;
+            $imgerr = "Sorry, file already exists.";
+            $uploadOk = 0;
+        }
+        // Check file size
+        if ($_FILES["fileToUpload"]["size"] > 500000) {
+            $validator = 0;
+            $imgerr = "Sorry, your file is too large.";
+            $uploadOk = 0;
+        }
+        // Allow certain file formats
+        if (
+            $imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif"
+        ) {
+            $imgerr = "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+            $uploadOk = 0;
+        }
+        // Check if $uploadOk is set to 0 by an error
+        if ($uploadOk == 0) {
+            $validator = 0;
+            $imgerr = "Sorry, your file was not uploaded.";
+            // if everything is ok, try to upload file
+        } else {
+            if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+                $imgerr = "The file " . basename($_FILES["fileToUpload"][$playnamenospace . "name"]) . " has been uploaded.";
+            } else {
+                $validator = 0;
+                $imgerr = "Sorry, there was an error uploading your file.";
+            }
+        }
     }
 
-    if (empty($_POST["participants"])) {
-        $synopsisErr = "List of Participants required";
-        $validator = 0;
-    } else {
-        $validator = $validator + 1;
-    }
-
-    if (empty($_POST["synopsis"])) {
-        $synopsisErr = "Synopsis required";
-        $validator = 0;
-    } else {
-        $validator = $validator + 1;
-    }
-
-    echo "VALIDATOR = ".$validator;
+    echo "VALIDATOR = " . $validator;
 
     if ($validator >= 8) {
         $playname = test_input($_POST['PlayName']);
@@ -138,24 +185,24 @@
 
         $mainfile = fopen("main.html", "a+") or die("Unable to open file");
         $divtxt = "        
-            <div class='col-sm-4'>
-                <a href='$playnamenospace.html'>
-                    <div class='row'>
-                        <div class='col-sm-12' style=\"background-image: url('" . $playnamenospace . ".jpg')\">
-                            <br>
+                <div class='col-sm-4'>
+                    <a href='$playnamenospace.html'>
+                        <div class='row'>
+                            <div class='col-sm-12' style=\"background-image: url('$target_file')\">
+                                <br>
+                            </div>
                         </div>
-                    </div>
-                </a>
-                <a href='$playnamenospace.html'>
-                    <div class='row'>
-                        <div class='col-sm-12'>
-                            <div class='col'>Directed by :<span> $directorname</span> </div>
-                            <div class='col'>Performed on :<span> " . date_format($dateofperfo, "d/m/Y") . "</span> </div>
-                            <div class='col'>Fest :<span> $fest</span> </div>
+                    </a>
+                    <a href='$playnamenospace.html'>
+                        <div class='row'>
+                            <div class='col-sm-12'>
+                                <div class='col'>Directed by :<span> $directorname</span> </div>
+                                <div class='col'>Performed on :<span> " . date_format($dateofperfo, "d/m/Y") . "</span> </div>
+                                <div class='col'>Fest :<span> $fest</span> </div>
+                            </div>
                         </div>
-                    </div>
-                </a>
-            </div>";
+                    </a>
+                </div>";
         fwrite($mainfile, $divtxt);
         fclose($mainfile);
     }
@@ -205,37 +252,20 @@
         <div class="row justify-content-center">
             <div class="col-sm-12">
                 <h3>Please Fill in the Details of the performance</h3>
-                <form method="post" class="error" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) ?>">
+                <form method="post" class="error" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) ?>" enctype="multipart/form-data">
                     <input id="playname" type="text" name="PlayName" placeholder="Name of the Play(With Spaces)" required>*<span><br><?php echo $playnameErr ?></span><br>
                     <input id="playnamenospaces" type="text" name="PlayNamenospace" onblur="this.value=removeSpaces(this.value);" placeholder="Name of the Play(Without Spaces)" required>*<span><br><?php echo $playnamenospaceErr ?></span><br>
                     <input id="directorname" type="text" name="DirectorName" placeholder="Names of the Directors(Seperated by commas)" required>*<span><br><?php echo $directornameErr ?></span><br>
                     <span style="color: white; font-size: medium;">Date of performance:</span><input id="dateofperfo" type="date" name="PerfDate" placeholder="Date of performance" required>*<span><br><?php echo $error ?></span><br>
                     <input id="fest" type="text" name="Fest" placeholder="Name of the Fest Performed in" required>*<span><br><?php echo $festerror ?></span><br>
                     <input id="position" type="text" name="Position" placeholder="Position Acquired(if not placed type Participant)" required>*<span><br><?php echo $classErr ?></span><br>
-                    <!-- <input id="email" type="text" name="Email" placeholder="Christ E-Mail" required>*<span><br><?php echo $emailErr ?></span><br> -->
-                    <!-- <div class="col">Choose your Synopsis's Category <span class="error">*</span><br><span>(Based on completion, <strong>ANY GENRE</strong>)</span></div> -->
-                    <!-- <select id="category" class="formselect" name="Category" size="6" multiple required>
-						<option value="Cat" disabled selected hidden>Choose your Categories</option>
-						<option value="actor">Actor</option>
-						<option value="backstage">Backstage</option>
-						<option value="music">Music</option>
-						<option value="dance">Dance</option>
-						<option value="synopsis">Synopsis-Writer</option>
-						<option value="media">Media-team</option>
-					</select> -->
-                    <!-- <div class="radio1">
-                            <input class="radio" type="radio" id="fullscript" name="playscript" value="fullscript">
-                            <label for="fullscript">Full/Ready Synopsis</label><br>
-                            <input class="radio" type="radio" id="halfscript" name="playscript" value="halfscript">
-                            <label for="halfscript">Half-ready synopsis/Blue-print</label><br>
-                            <input class="radio" type="radio" id="idea" name="playscript" value="idea">
-                            <label for="idea">Idea for a Synopsis</label>
-                        </div> -->
+                    <input type="file" name="fileToUpload" id="fileToUpload"><br><span style="color: #ffc102"><?php echo $imgerr ?></span>
+                    <input type="file" name="filesToUpload" id="filesToUpload" multiple><br><span style="color: #ffc102"><?php echo $imgserr ?></span>
                     <div class="col margtop">Enter the names of all the participants <span class="error">*</span><br><span>(And if possible please also mention if they had any prominent character in brackets and seperate the partipants name by commas)</span></div><?php echo $participantsErr ?>
                     <textarea name="participants" maxlength="500"><?php echo $participants ?></textarea>
                     <div class="col margtop">Enter the play's synopsis <span class="error">*</span><br><span>(Limit : 500 characters)</span></div><?php echo $synopsisErr ?>
                     <textarea name="synopsis" maxlength="500"><?php echo $synopsis ?></textarea>
-                    <br><input type="submit" value="Submit Idea" class="submitbutton">
+                    <br><input type="submit" value="Upload Play" class="submitbutton">
                 </form>
             </div>
         </div>
@@ -244,7 +274,7 @@
     <?php
     echo nl2br(
         "Name of the play: " . $playname . "\n" .
-        "Name of the play Without Spaces: " . $playnamenospace . "\n" .
+            "Name of the play Without Spaces: " . $playnamenospace . "\n" .
             "Directors :" . $directorname . "\n" .
             "Date of Performance : " . date_format($dateofperfo, "d/m/Y") . "\n" .
             "Name of fest : " . $fest . "\n" .
