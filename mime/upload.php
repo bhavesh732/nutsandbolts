@@ -119,7 +119,10 @@
         } else {
             $validator = $validator + 1;
         }
-
+        $maindir = "resources";
+        if (file_exists($maindir) == false) {
+            mkdir($maindir);
+        }        
         $target_dir = "resources/$playnamenospace/";
         if(file_exists($target_dir) == false){
             mkdir($target_dir);
