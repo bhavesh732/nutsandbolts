@@ -122,9 +122,9 @@
         $maindir = "resources";
         if (file_exists($maindir) == false) {
             mkdir($maindir);
-        }        
+        }
         $target_dir = "resources/$playnamenospace/";
-        if(file_exists($target_dir) == false){
+        if (file_exists($target_dir) == false) {
             mkdir($target_dir);
         }
         $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
@@ -162,11 +162,12 @@
             $validator = 0;
         }
 
-        function reArrayFiles($filepost){
+        function reArrayFiles($filepost)
+        {
             $file_ary = array();
             $file_count = count($filepost['name']);
             $file_keys = array_keys($filepost);
-            for ($i=0; $i < $file_count ; $i++) { 
+            for ($i = 0; $i < $file_count; $i++) {
                 foreach ($file_keys as $key) {
                     $file_ary[$i][$key] = $filepost[$key][$i];
                 }
@@ -176,12 +177,12 @@
 
         if (isset($_FILES['filesToUpload'])) {
             $myFile = reArrayFiles($_FILES['filesToUpload']);
-            for($i=0;$i<count($myFile);$i++){ 
+            for ($i = 0; $i < count($myFile); $i++) {
                 $target_files[$i] = $target_dir . basename($myFile[$i]["name"]);
                 $uploadOk[$i] = 1;
                 $imageFileType = strtolower(pathinfo($target_files[$i], PATHINFO_EXTENSION));
                 $check = getimagesize($myFile[$i]["tmp_name"]);
-                
+
                 if ($check !== false) {
                     //echo "File is an image - " . $check["mime"] . ".";
                     $uploadOk[$i] = 1;
@@ -215,11 +216,12 @@
             }
         }
     }
-    
-    // echo "VALIDATOR = " . $validator . "\n"; echo "File count = ". count($myFile);
+
+    // echo "VALIDATOR = " . $validator . "\n"; 
+    //echo "File count = ". count($myFile);
     // echo "filename = " . $target_files[$k];
-    
-    if ($validator >= 7) {
+
+    if ($validator >= 6) {
         if ($uploadOkay == 0) {
             $imgerr = "Sorry, your file was not uploaded.";
             // if everything is ok, try to upload file
@@ -232,7 +234,7 @@
             }
         }
         $validator = 0;
-        for ($i = 0; $i < count($myFile); $i++){
+        for ($i = 0; $i < count($myFile); $i++) {
             if ($uploadOk[$i] == 0) {
                 $imgerr = "Sorry, your file was not uploaded.";
                 // if everything is ok, try to upload file
@@ -253,7 +255,7 @@
         $fest = test_input($_POST['Fest']);
         $position = test_input($_POST['Position']);
         $synopsis = test_input($_POST["synopsis"]);
-        $participants = test_input($_POST["participants"]);
+        //$participants = test_input($_POST["participants"]);
 
         $mainfile = fopen("main.html", "a+") or die("Unable to open file");
         $divtxt = "        
@@ -331,10 +333,15 @@
                     <span style="color: white; font-size: medium;">Date of performance:</span><input id="dateofperfo" type="date" name="PerfDate" placeholder="Date of performance" required>*<span><br><?php echo $error ?></span><br>
                     <input id="fest" type="text" name="Fest" placeholder="Name of the Fest Performed in" required>*<span><br><?php echo $festerror ?></span><br>
                     <input id="position" type="text" name="Position" placeholder="Position Acquired(if not placed type Participant)" required>*<span><br><?php echo $classErr ?></span><br>
-                    <input type="file" name="fileToUpload" id="fileToUpload"><br><span style="color: #ffc102"><?php echo $imgerr ?></span><br>
-                    <input type="file" name="filesToUpload[]" id="filesToUpload" multiple=""><br><span style="color: #ffc102"><?php echo $imgserr ?></span>
-                    <div class="col margtop">Enter the names of all the participants <span class="error">*</span><br><span>(And if possible please also mention if they had any prominent character in brackets and seperate the partipants name by commas)</span></div><?php echo $participantsErr ?>
-                    <textarea name="participants" maxlength="500"><?php echo $participants ?></textarea>
+                    <span style="color: white; font-size: medium;">Please select the main photo for the play for main page: </span><br><input type="file" name="fileToUpload" id="fileToUpload"><br><span style="color: #ffc102"><?php echo $imgerr ?></span><br>
+                    <span style="color: white; font-size: medium;">Please select a few photos of the play that you want to add in the play's page:(upto 10)</span><br><input type="file" name="filesToUpload[]" id="filesToUpload" multiple=""><br><span style="color: #ffc102"><?php echo $imgserr ?></span>
+                    <!-- <div class="col margtop">Enter the names of all the participants <span class="error">*</span><br><span>(And if possible please also mention if they had any prominent character in brackets and seperate the partipants name by commas)</span></div>
+                    <?php
+                    //echo $participantsErr
+                    ?> -->
+                    <!-- <textarea name="participants" maxlength="500"><?php
+                                                                        //echo $participants 
+                                                                        ?></textarea> -->
                     <div class="col margtop">Enter the play's synopsis <span class="error">*</span><br><span>(Limit : 500 characters)</span></div><?php echo $synopsisErr ?>
                     <textarea name="synopsis" maxlength="500"><?php echo $synopsis ?></textarea>
                     <br><input type="submit" value="Upload Play" class="submitbutton">

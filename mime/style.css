@@ -28,9 +28,13 @@ input {
     color: black;
 }
 
+.col-sm-4 {
+    z-index: 0;
+}
+
 .col-sm-4:hover {
     transform: scale(1.1);
-    z-index: 10000;
+    z-index: 1;
     transition: 0.5s;
     padding: 0px;
     margin: 0px;
@@ -53,7 +57,7 @@ input {
     font-size: medium;
 }
 
-s .col-sm-4:nth-child(3n+1):hover {
+.col-sm-4:nth-child(3n+1):hover {
     left: 50px;
 }
 
