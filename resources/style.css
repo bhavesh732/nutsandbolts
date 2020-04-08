@@ -3,6 +3,24 @@
     font-family: "Poppins";
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ffc002a4;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ffc102;
+}
+
 
 /*
 #201f1f
@@ -589,7 +607,7 @@ footer {
 }
 
 .copy {
-    padding-top: 15vh;
+    padding-top: 14vh;
 }
 
 .footerdisplay {
