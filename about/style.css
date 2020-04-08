@@ -135,10 +135,6 @@ nav ul li strong span {
     padding: 0px;
 }
 
-.bigcol img:hover {
-    /* transform: scale(1.1); */
-}
-
 .bigcol img {
     border: none;
 }
