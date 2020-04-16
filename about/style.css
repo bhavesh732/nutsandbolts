@@ -9,16 +9,22 @@ body {
     background-image: url(../resources/760x360.jpg);
 }
 
+.navbar {
+    z-index: 100;
+}
+
 h1 {
-    color: #ffc102;
-    font-weight: bolder;
-    margin-top: 10px;
+    color: black;
+    font-weight: 900;
+    margin-top: 15%;
 }
 
 p {
     padding: 5vh;
-    padding-left: 10vh;
-    color: white;
+    padding-left: 8vh;
+    color: black;
+    font-weight: 500;
+    background-color: rgba(0, 0, 0, 0)
 }
 
 .img-fluid {
@@ -33,7 +39,8 @@ h2 {
 }
 
 footer {
-    margin-top: 180px;
+    width: 100vw;
+    position: relative;
 }
 
 .logo {
@@ -127,6 +134,18 @@ nav ul li strong span {
     z-index: 90000;
 }
 
+.margtop {
+    margin-top: 126vh;
+}
+
+.position {
+    position: absolute;
+}
+
+.positionfixed {
+    position: fixed;
+}
+
 .margtop .col-sm-2 {
     padding: 0px;
 }
@@ -199,9 +218,35 @@ nav ul li strong span {
     }
 }
 
+.horizontal {
+    padding: 0px;
+    background-color: #ffc102;
+}
+
+.horizontal .halfwidth {
+    width: 50%;
+}
+
+.horizontal .halfwidth:nth-child(1) {
+    height: 100vh;
+    background-color: #ffc102;
+    z-index: 99;
+}
+
+.horizontal .halfwidth:nth-child(2) {
+    height: 100vh;
+    margin-left: 50%;
+    background-color: #ffc102;
+}
+
+.horizontal-fluid {
+    padding: 0px;
+}
+
 .mainanimationwe {
     animation-name: mainanimation;
     animation-duration: 1s;
+    margin-left: 10vh;
 }
 
 .mainanimationand {
@@ -215,14 +260,19 @@ nav ul li strong span {
     text-align: center;
 }
 
+video {
+    width: 100%;
+    height: 100vh;
+}
+
 .bigcol {
     font-size: 0;
-    height: 60vh;
-    width: 100vw;
+    height: 226vh;
+    width: 50vw;
     /* position: fixed; */
     display: grid;
-    grid-template-columns: 11% 11% 11% 11% 11% 11% 11% 11% 11% 11% 11%;
-    grid-template-rows: 33.33% 33.33% 33.33%;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 22vh 22vh 22vh 22vh 22vh 22vh 22vh 22vh 22vh 22vh 22vh 22vh 22vh 22vh;
     grid-gap: 5px;
     grid-auto-flow: dense;
     /* grid-gap: 10px; */
@@ -230,7 +280,10 @@ nav ul li strong span {
     bottom: 0;
     overflow-y: hidden;
     margin-bottom: -10px;
-    overflow-x: scroll;
+    overflow-x: hidden;
+    margin-left: 5px;
+    margin-top: 5px;
+    background-color: #ffc102;
 }
 
 .bigcol .item {
@@ -246,21 +299,16 @@ nav ul li strong span {
 
 .bigcol .item:nth-child(1) {
     grid-row: span 3;
-    grid-column: span 2;
-}
-
-.bigcol .item:nth-child(2) {
-    grid-row: span 1;
-    grid-column: span 2;
-}
-
-.bigcol .item:nth-child(3) {
-    grid-row: span 2;
-    grid-column: span 1;
+    grid-column: span 4;
 }
 
 .bigcol .item:nth-child(4) {
     grid-row: span 2;
+    grid-column: span 2;
+}
+
+.bigcol .item:nth-child(5) {
+    grid-row: span 3;
     grid-column: span 2;
 }
 
@@ -269,9 +317,14 @@ nav ul li strong span {
     grid-column: span 2;
 }
 
-.bigcol .item:nth-child(10) {
+.bigcol .item:nth-child(8) {
     grid-row: span 2;
-    grid-column: span 3;
+    grid-column: span 1;
+}
+
+.bigcol .item:nth-child(10) {
+    grid-row: span 1;
+    grid-column: span 2;
 }
 
 .bigcol .item:nth-child(11) {
@@ -279,14 +332,14 @@ nav ul li strong span {
     grid-column: span 1;
 }
 
-.bigcol .item:nth-child(13) {
-    grid-row: span 1;
-    grid-column: span 2;
+.bigcol .item:nth-child(12) {
+    grid-row: span 2;
+    grid-column: span 3;
 }
 
 .bigcol .item:nth-child(18) {
-    grid-row: span 1;
-    grid-column: span 2;
+    grid-row: span;
+    grid-column: span;
 }
 
 .bigcol-2 {
@@ -363,6 +416,19 @@ nav ul li strong span {
     grid-column: span 2;
 }
 
+.margright {
+    margin-left: 50%;
+}
+
+.margtop:nth-child(1) .row:nth-child(3) {
+    margin-left: 50%;
+}
+
+.margleft {
+    margin-right: 50%;
+    margin-left: 0px;
+}
+
 @media screen and (max-width: 850px) {
     .headerintro {
         margin-top: 2.5vh;
@@ -389,9 +455,15 @@ nav ul li strong span {
     .h11 span {
         padding-left: 80px;
     }
+    h1 {
+        font-size: medium;
+    }
 }
 
 @media screen and (max-width: 766px) {
+    .margtopmobile {
+        margin-top: 10vh;
+    }
     .logo {
         margin-left: 90px;
         height: 44px;
@@ -430,6 +502,10 @@ nav ul li strong span {
     }
     h1 {
         font-size: x-large;
+        margin-top: 30px;
+    }
+    #we {
+        padding: 0px;
     }
     .bigcol {
         width: 100vw;
@@ -446,7 +522,7 @@ nav ul li strong span {
         height: auto;
     }
     .margtop {
-        margin-top: -180px;
+        margin-top: 10vh;
     }
     .h11 {
         font-size: xx-large;
@@ -458,7 +534,7 @@ nav ul li strong span {
         display: none;
     }
     .h11 span {
-        padding-left: 0px;
+        padding-left: 10px;
     }
     .col-sm-2:nth-child(odd):hover {
         transform: none;
@@ -466,16 +542,6 @@ nav ul li strong span {
     .col-sm-2:nth-child(even):hover {
         transform: none;
     }
-    /* .col-sm-2:nth-child(even) {
-        transform: rotate(5deg);
-    }
-    .col-sm-2:nth-child(odd) {
-        transform: rotate(-5deg);
-    }
-    .col-sm-2 .img-fluid {
-        width: 95%;
-        border: 15px solid white;
-    } */
     .margtop1 {
         margin-top: 0vh;
     }
@@ -483,6 +549,36 @@ nav ul li strong span {
     .col-sm-10 .row .col-sm-2 {
         height: auto;
     }
+    .horizontal .halfwidth {
+        width: 100%;
+        background-color: #ffc102;
+    }
+    .horizontal .halfwidth:nth-child(1) {
+        position: static;
+        height: auto;
+    }
+    .horizontal .halfwidth:nth-child(2) {
+        margin-left: 0px;
+    }
+    .horizontal {
+        height: auto;
+    }
+    .horizontal:nth-child(2) {
+        margin-top: 100vh;
+    }
+    .bigcol {
+        display: grid;
+        grid-template-columns: 33.33% 32% 32%;
+        grid-template-rows: 8% 8% 8% 8% 8% 8% 8% 8% 8% 8% 8% 8% 8% 8%;
+        overflow-x: hidden;
+        height: auto;
+        margin-left: 0px;
+    }
+    video {
+        height: auto;
+        width: 100%;
+    }
+    .row {}
 }
 
 .parallax {
