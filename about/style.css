@@ -40,7 +40,8 @@ h2 {
 
 footer {
     width: 100vw;
-    position: relative;
+    position: static;
+    margin-top: 127vh;
 }
 
 .logo {
@@ -265,6 +266,11 @@ video {
     height: 100vh;
 }
 
+.parent {
+    background-color: #ffc102;
+    position: relative;
+}
+
 .bigcol {
     font-size: 0;
     height: 226vh;
@@ -281,7 +287,6 @@ video {
     overflow-y: hidden;
     margin-bottom: -10px;
     overflow-x: hidden;
-    margin-left: 5px;
     margin-top: 5px;
     background-color: #ffc102;
 }
