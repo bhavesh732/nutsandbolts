@@ -74,8 +74,10 @@ if (mq.matches) {
             row3.style.position = "absolute";
         }
         if (document.body.scrollTop > 5000 || document.documentElement.scrollTop > 5000) {
-            row3.style.position = "absolute";
-            row3.style.bottom = 0;
+            // row3.style.position = "absolute";
+            row3.style.marginTop = "-145px";
+        } else {
+            row3.style.marginTop = "0px";
         }
     }
 }
