@@ -21,9 +21,14 @@ function topFunction() {
     document.documentElement.scrollTop = 0;
 }
 
+var leftparent = document.getElementById('leftparent');
+var container = document.getElementById('container');
 const row1 = document.getElementById('row1');
 const row2 = document.getElementById('row2');
 const row3 = document.getElementById('row3');
+// const bigcol1 = document.getElementById('bigcol1');
+// const bigcol2 = document.getElementById('bigcol2');
+// const bigcol3 = document.getElementById('bigcol3');
 const lastdiv = document.getElementById('lastdiv');
 
 var mq = window.matchMedia("(max-width: 766px)");
@@ -52,32 +57,50 @@ if (mq.matches) {
         }
     }
 } else {
-    row1.style.position = "absolute";
 
     function marginfunction() {
-        if (document.body.scrollTop > 787 || document.documentElement.scrollTop > 787) {
-            row1.style.position = "fixed";
+        if (document.body.scrollTop > 797 || document.body.scrollTop > 2375 || document.body.scrollTop > 3963 || document.documentElement.scrollTop > 797 || document.documentElement.scrollTop > 2375 || document.documentElement.scrollTop > 3963) {
+            container.style.marginLeft = "15px";
+            leftparent.style.position = "fixed";
+            leftparent.style.top = "0px";
+            leftparent.style.marginTop = "0vh";
+            if (document.body.scrollTop > 1653 || document.documentElement.scrollTop > 1653) {
+                container.style.marginLeft = "15px";
+                leftparent.style.position = "absolute";
+                leftparent.style.marginTop = "230vh";
+            }
+            if (document.body.scrollTop > 2375 || document.documentElement.scrollTop > 2375) {
+                // container.style.marginLeft = "0px";
+                leftparent.style.position = "fixed";
+                leftparent.style.bottom = "0";
+                leftparent.style.marginTop = "-100vh";
+            }
+            if (document.body.scrollTop > 3197 || document.documentElement.scrollTop > 3197) {
+                // container.style.marginLeft = "15px";
+                leftparent.style.position = "absolute";
+                leftparent.style.marginTop = "347vh";
+            }
+            if (document.body.scrollTop > 3963 || document.documentElement.scrollTop > 3963) {
+                // container.style.marginLeft = "0px";
+                leftparent.style.position = "fixed";
+                leftparent.style.bottom = "0";
+                leftparent.style.marginTop = "-200vh";
+            }
+            if (document.body.scrollTop > 4841 || document.documentElement.scrollTop > 4841) {
+                // container.style.marginLeft = "15px";
+                leftparent.style.position = "absolute";
+                leftparent.style.marginTop = "484.7vh";
+            }
         } else {
-            row1.style.position = "absolute";
-            row1.style.bottom = 0;
+            leftparent.style.position = "absolute";
+            leftparent.style.top = "initial";
+            leftparent.style.bottom = "initial";
+            leftparent.style.marginTop = "0vh";
         }
-        if (document.body.scrollTop > 2387 || document.documentElement.scrollTop > 2387) {
-            row1.style.position = "absolute"
-            row2.style.position = "fixed";
-        } else {
-            row2.style.position = "absolute";
-        }
-        if (document.body.scrollTop > 4037 || document.documentElement.scrollTop > 4037) {
-            row2.style.position = "absolute"
-            row3.style.position = "fixed";
-        } else {
-            row3.style.position = "absolute";
-        }
-        if (document.body.scrollTop > 5000 || document.documentElement.scrollTop > 5000) {
-            // row3.style.position = "absolute";
-            row3.style.marginTop = "-145px";
-        } else {
-            row3.style.marginTop = "0px";
-        }
+        // else {
+        //     leftparent.style.position = "absolute";
+        //     leftparent.style.bottom = "initial";
+        //     leftparent.style.marginTop = "0vh";
+        // }
     }
 }
