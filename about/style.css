@@ -41,7 +41,7 @@ h2 {
 footer {
     width: 100vw;
     position: static;
-    margin-top: 127vh;
+    margin-top: 2vh;
 }
 
 .logo {
@@ -101,7 +101,7 @@ nav ul li strong span {
     text-align: right;
     color: black;
     background-color: #ffc102;
-    padding-left: 140px;
+    padding-left: 0px;
     padding-right: 10px;
 }
 
@@ -178,6 +178,7 @@ nav ul li strong span {
 
 .row {
     margin: 0px;
+    margin-right: 0px;
 }
 
 .bigcol img .row {
@@ -383,6 +384,10 @@ video {
     margin-left: 50%;
 }
 
+.h11 br {
+    display: none;
+}
+
 @media screen and (max-width: 900px) {
     .mobile {
         display: block;
@@ -411,12 +416,25 @@ video {
     .h11 {
         font-size: xx-large;
         padding-top: 4vh;
+        margin-top: auto;
     }
     .h11 span {
-        padding-left: 80px;
+        padding-left: 0px;
     }
     h1 {
-        font-size: medium;
+        margin-top: 5vh;
+        font-size: xx-large;
+    }
+    .horizontal .halfwidth:nth-child(1) {
+        height: fit-content;
+    }
+    .horizontal .halfwidth:nth-child(2) {
+        width: 100%;
+        margin-left: 0px;
+    }
+    .bigcol {
+        margin-left: 0px;
+        width: 100%;
     }
 }
 
@@ -489,6 +507,7 @@ video {
         font-weight: 900;
         text-align: center;
         padding-top: 3vh;
+        margin-top: auto;
     }
     .h11 br {
         display: none;

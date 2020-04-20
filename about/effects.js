@@ -60,12 +60,12 @@ if (mq.matches) {
 
     function marginfunction() {
         if (document.body.scrollTop > 797 || document.body.scrollTop > 2375 || document.body.scrollTop > 3963 || document.documentElement.scrollTop > 797 || document.documentElement.scrollTop > 2375 || document.documentElement.scrollTop > 3963) {
-            container.style.marginLeft = "15px";
+            // leftparent.style.marginLeft = "-15px";
             leftparent.style.position = "fixed";
             leftparent.style.top = "0px";
             leftparent.style.marginTop = "0vh";
             if (document.body.scrollTop > 1653 || document.documentElement.scrollTop > 1653) {
-                container.style.marginLeft = "15px";
+                // leftparent.style.marginLeft = "0px";
                 leftparent.style.position = "absolute";
                 leftparent.style.marginTop = "230vh";
             }
