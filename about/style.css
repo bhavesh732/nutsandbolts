@@ -543,7 +543,7 @@ video {
         height: auto;
     }
     .horizontal:nth-child(2) {
-        margin-top: 100vh;
+        /* margin-top: 100vh; */
     }
     .bigcol {
         display: grid;
