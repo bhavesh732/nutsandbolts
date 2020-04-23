@@ -16,12 +16,12 @@ body {
 h1 {
     color: black;
     font-weight: 900;
-    margin-top: 15%;
+    margin-top: 10%;
 }
 
 p {
-    padding: 5vh;
-    padding-left: 8vh;
+    padding: 0vh;
+    padding-left: 0vh;
     color: black;
     font-weight: 500;
     background-color: rgba(0, 0, 0, 0)
@@ -94,7 +94,6 @@ nav ul li strong span {
     padding-top: 4vh;
     color: white;
     font-size: 50px;
-    margin-top: 15vh;
 }
 
 .h11 span {
@@ -302,18 +301,19 @@ video {
 }
 
 .margin {
-    height: fit-content;
+    height: 100vh;
     position: absolute;
     width: 100%;
 }
 
-.margin:nth-child(2) {
+
+/* .margin:nth-child(2) {
     margin-top: 10vh;
 }
 
 .margin:nth-child(3) {
-    /* margin-top: 60vh; */
-}
+    margin-top: 60vh;
+} */
 
 #leftparent {
     height: 300vh;
@@ -405,7 +405,7 @@ video {
         align-content: flex-start;
     }
     p {
-        padding: 2vh;
+        padding: 0vh;
     }
     .margtop {
         margin-top: 0px;
