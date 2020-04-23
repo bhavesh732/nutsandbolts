@@ -542,9 +542,6 @@ video {
     .horizontal {
         height: auto;
     }
-    .horizontal:nth-child(2) {
-        /* margin-top: 100vh; */
-    }
     .bigcol {
         display: grid;
         grid-template-columns: 33.33% 32% 32%;
