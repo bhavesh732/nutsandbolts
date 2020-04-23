@@ -6,6 +6,10 @@
 #a5a5a5
 */
 
+body {
+    overflow-y: scroll;
+}
+
 .col-sm-4 {
     height: 50vh;
     width: 100%;
@@ -13,6 +17,7 @@
 
 footer {
     margin-top: 0px;
+    position: static;
 }
 
 input {
@@ -162,6 +167,10 @@ nav ul li a:nth-child(2) {
 nav ul li strong span {
     font-size: 40px;
     color: #ffc102;
+}
+
+.social-media {
+    width: fit-content;
 }
 
 @media screen and (max-width:950px) {

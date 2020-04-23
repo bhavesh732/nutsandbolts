@@ -1,9 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
-* {
-    font-family: "Poppins";
-    outline: 0;
-}
-
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -34,11 +29,11 @@
 * {
     margin: 0px;
     font-family: "Poppins";
-    overflow: hidden;
 }
 
 body {
     background-color: black;
+    overflow-y: hidden;
 }
 
 #bod {
@@ -786,7 +781,11 @@ a {
         display: none;
     }
     .fixheight2 {
-        height: 30vh;
+        position: relative;
+        height: 150vh;
+    }
+    .fullheight {
+        height: 20%;
     }
     .imgmarg {
         margin-left: 100px;
@@ -813,6 +812,8 @@ a {
     }
     .teamname {
         padding-top: 0vh;
+        margin-top: 5vh;
+        margin-bottom: 5vh;
     }
     .teamname img {
         height: 200px;
@@ -834,11 +835,11 @@ a {
         right: 20px;
     }
     footer {
-        margin-top: 120vh;
         font-size: x-small;
         display: block;
         bottom: 0px;
         text-align: center;
+        position: static;
     }
     .footerdisplay {
         display: block;
