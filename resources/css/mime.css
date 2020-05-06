@@ -77,7 +77,7 @@ input {
 }
 
 .col-sm-4 a:nth-child(1) .row .col-sm-12 {
-    background-image: url(../resources/497x253.png);
+    background-image: url(../images/497x253.png);
     background-size: contain;
     background-repeat: repeat;
     border-top-left-radius: 5px;
@@ -170,6 +170,27 @@ nav ul li strong span {
 
 .social-media {
     width: fit-content;
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.navpos {
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    position: fixed;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.navbar {
+    height: 80.2px;
 }
 
 @media screen and (max-width:950px) {

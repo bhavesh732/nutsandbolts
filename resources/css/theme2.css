@@ -5,7 +5,7 @@
 .col-sm-6 {
     height: 50vh;
     width: 100%;
-    background-image: url(../resources/760x360.jpg);
+    background-image: url(../images/760x360.jpg);
 }
 
 footer {
@@ -28,6 +28,14 @@ nav ul li strong span span {
     margin-top: 7px;
 }
 
+.mynav {
+    height: 100vh;
+}
+
+#butons {
+    padding-top: 25vh;
+}
+
 .instalogo {
     margin-top: 10px;
 }
@@ -46,22 +54,6 @@ nav ul li strong span {
     color: #ffc102;
 }
 
-.mynav {
-    height: 100vh;
-}
-
-#butons {
-    padding-top: 25vh;
-}
-
-.ytfooter {
-    margin-right: 0px;
-}
-
-.social-media {
-    margin-right: 20px;
-}
-
 @media screen and (max-width: 766px) {
     .logo {
         margin-left: 90px;
@@ -70,7 +62,7 @@ nav ul li strong span {
     }
     nav ul li a:nth-child(2) {
         margin-top: 0px;
-        margin-right: 10px;
+        margin-right: 20px;
     }
     nav ul li strong span {
         font-size: x-large;
@@ -79,7 +71,11 @@ nav ul li strong span {
         font-size: x-large;
     }
     .mainspan {
-        margin-left: -15px;
+        margin-left: 10px;
+    }
+    .ytlogo {
+        margin-right: 10px;
+        margin-top: 5px;
     }
     #butons {
         padding-top: 20vh;
@@ -95,4 +91,12 @@ nav ul li strong span {
         margin-right: 10px;
         margin-top: 5px;
     }
+}
+
+.ytfooter {
+    margin-right: 0px;
+}
+
+.social-media {
+    margin-right: 20px;
 }

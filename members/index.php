@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="../resources/style.css">
-    <link rel="stylesheet" href="../mime/style.css">
-    <link rel="stylesheet" href="members.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="../bootstrap/jquery.min.js"></script>
-    <script src="../bootstrap/popper.min.js"></script>
-    <script src="../bootstrap/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../resources/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../resources/css/style.css">
+    <link rel="stylesheet" href="../resources/css/mime.css">
+    <link rel="stylesheet" href="../resources/css/members.css">
+    <link rel="stylesheet" href="../resources/css/members2.css">
+    <script src="../resources/javascripts/jquery.min.js"></script>
+    <script src="../resources/javascripts/popper.min.js"></script>
+    <script src="../resources/javascripts/bootstrap.min.js"></script>
     <title>Document</title>
 </head>
 
@@ -657,7 +657,8 @@
             Copyright &copy; &lt;NUTS AND BOLTS PRODUCTIONS&gt;. All rights reserved.<br> Created by Media team NUTS AND BOLTS PRODUCTIONS and <a href="https://www.instagram.com/ctrlalt.create_/" style="color: #FFC102;">CTRL+ALT+CREATE</a>
         </div>
     </footer>
-    <script src="./main.js"></script>
+    <script src="../resources/javascripts/main.js"></script>
+    <script src="../resources/javascripts/members.js"></script>
 </body>
 
 </html>
