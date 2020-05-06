@@ -77,43 +77,5 @@ if (mq.matches) {
             leftparent.style.bottom = "initial";
             leftparent.style.marginTop = "0vh";
         }
-        // if (document.body.scrollTop > window.innerHeight*1.10326 || document.body.scrollTop > 2375 || document.body.scrollTop > 3963 || document.documentElement.scrollTop > window.innerHeight*1.10326 || document.documentElement.scrollTop > 2375 || document.documentElement.scrollTop > 3963) {
-        //     // leftparent.style.marginLeft = "-15px";
-        //     leftparent.style.position = "fixed";
-        //     leftparent.style.top = "0px";
-        //     leftparent.style.marginTop = "0vh";
-        //     if (document.body.scrollTop > 1653 || document.documentElement.scrollTop > 1653) {
-        //         // leftparent.style.marginLeft = "0px";
-        //         leftparent.style.position = "absolute";
-        //         leftparent.style.marginTop = "230vh";
-        //     }
-        //     if (document.body.scrollTop > 2375 || document.documentElement.scrollTop > 2375) {
-        //         // container.style.marginLeft = "0px";
-        //         leftparent.style.position = "fixed";
-        //         leftparent.style.bottom = "0";
-        //         leftparent.style.marginTop = "-100vh";
-        //     }
-        //     if (document.body.scrollTop > 3197 || document.documentElement.scrollTop > 3197) {
-        //         // container.style.marginLeft = "15px";
-        //         leftparent.style.position = "absolute";
-        //         leftparent.style.marginTop = "347vh";
-        //     }
-        //     if (document.body.scrollTop > 3963 || document.documentElement.scrollTop > 3963) {
-        //         // container.style.marginLeft = "0px";
-        //         leftparent.style.position = "fixed";
-        //         leftparent.style.bottom = "0";
-        //         leftparent.style.marginTop = "-200vh";
-        //     }
-        //     if (document.body.scrollTop > 4841 || document.documentElement.scrollTop > 4841) {
-        //         // container.style.marginLeft = "15px";
-        //         leftparent.style.position = "absolute";
-        //         leftparent.style.marginTop = "484.7vh";
-        //     }
-        // } else {
-        //     leftparent.style.position = "absolute";
-        //     leftparent.style.top = "initial";
-        //     leftparent.style.bottom = "initial";
-        //     leftparent.style.marginTop = "0vh";
-        // }
     }
 }
