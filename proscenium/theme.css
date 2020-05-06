@@ -7,6 +7,7 @@ a.col-sm-6 {
     text-align: center;
     text-decoration: none;
     color: white;
+    padding: 15px;
 }
 
 a.col-sm-6 .container-fluid .row {
@@ -17,6 +18,31 @@ a.col-sm-6 .container-fluid .row {
     height: 50vh;
     display: table;
     overflow: hidden;
+    transition: 0.5s;
+}
+
+a.col-sm-6 .container-fluid .row .col-sm-12:nth-child(2) {
+    display: none;
+}
+
+a.col-sm-6 .container-fluid .row:hover {
+    background-size: 120%;
+    transition: 0.5s;
+}
+
+a.col-sm-6 .container-fluid .row:hover .col-sm-12:nth-child(1) {
+    display: none;
+    transition: 1s;
+}
+
+a.col-sm-6 .container-fluid .row:hover .col-sm-12:nth-child(2) {
+    display: table-cell;
+    vertical-align: middle;
+    transition: 1s;
+}
+
+.col-sm-12 .col:nth-child(3) {
+    font-size: small;
 }
 
 a.col-sm-6 .container-fluid .row:hover {
