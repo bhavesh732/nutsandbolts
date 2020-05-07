@@ -2,8 +2,8 @@ a.col-sm-6 {
     text-align: center;
     text-decoration: none;
     color: white;
-    margin: 15px;
     height: 50vh;
+    margin: 15px 0px;
 }
 
 a.col-sm-6 .container-fluid .row {

@@ -1,0 +1,143 @@
+.mainspan div {
+    font-size: large;
+    color: white;
+}
+
+.mainspan div:nth-child(2) {
+    font-size: x-large;
+    color: #ffc102;
+}
+
+.social-media-header {
+    margin: 11px 0px;
+}
+
+.instalogo {
+    margin-right: 10px;
+    margin-top: 0px;
+}
+
+body {
+    text-align: center;
+}
+
+.container {
+    text-align: center;
+}
+
+.container h1,
+.container h3,
+h4,
+h5,
+h6 {
+    color: #ffc102;
+    font-weight: 900;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container p {
+    color: white;
+    width: 100%;
+}
+
+.position {
+    margin: 20px auto;
+}
+
+.position h6 {
+    font-weight: 700;
+}
+
+.position p {
+    font-size: large;
+    font-weight: 400;
+}
+
+.date {
+    margin: 20px auto;
+}
+
+.date h5 {
+    font-weight: 700;
+}
+
+.date p {
+    font-size: large;
+    font-weight: 400;
+}
+
+.fest {
+    margin: 20px auto;
+    margin-top: 0px;
+}
+
+.fest h4 {
+    font-weight: 900;
+}
+
+.fest p {
+    font-size: x-large;
+    font-weight: 400;
+}
+
+.directors {
+    margin: 20px auto;
+    margin-bottom: 10px;
+}
+
+.directors h3 {
+    font-weight: 900;
+}
+
+.directors p {
+    font-size: xx-large;
+    font-weight: 400;
+}
+
+.frame {
+    width: 63vw;
+    height: 36vw;
+}
+
+@media screen and (max-width: 766px) {
+    .mainspan div:nth-child(2) {
+        font-size: x-large;
+        margin-top: -20px;
+    }
+    .ytlogo {
+        margin: 0px;
+    }
+    .directors h3 {
+        font-size: large;
+        margin: 0px auto;
+    }
+    .directors p {
+        font-size: x-large;
+    }
+    .fest h4 {
+        font-size: medium;
+    }
+    .fest p {
+        font-size: large;
+    }
+    .date h5 {
+        font-size: small;
+    }
+    .date p {
+        font-size: medium;
+    }
+    .position h6 {
+        font-size: x-small;
+    }
+    .position p {
+        font-size: small;
+    }
+    nav ul li a:nth-child(2) {
+        margin-right: 0px;
+    }
+    .frame {
+        width: 100vw;
+        height: 56vw;
+    }
+}

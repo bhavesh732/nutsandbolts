@@ -16,8 +16,6 @@ if ($conn->connect_error) {
 
 $playnamenospace = $_GET['playname'];
 $playtype = $_GET['playtype'];
-echo $playnamenospace;
-echo $playtype;
 
 ?>
 
@@ -91,7 +89,7 @@ echo $playtype;
         if (isset($playdetails->num_rows) && $playdetails->num_rows > 0) {
             $count = 0;
             while ($playrows = $playdetails->fetch_assoc()) {
-                echo    $playrows['playnamenospace'] . $playrows['playname'] .  $playrows['directorname'] . $playrows['dateofperfo'] . $playrows['fest'];
+                echo    $playrows['playnamenospace'] . $playrows['playname'] .  $playrows['directorname'] . $playrows['dateofperfo'] . $playrows['fest'] . "<img src='". $playrows['mainimage']. "' height= '400' width='400'>" . "<img src='" . $playrows['image1'] . "' height= '400' width='400'>" . "<img src='" . $playrows['image2'] . "' height= '400' width='400'>" . "<img src='" . $playrows['image3'] . "' height= '400' width='400'>";
                 $count++;
             }
         }

@@ -141,7 +141,7 @@ textarea {
     padding-top: 20vh;
 }
 
-nav ul li strong span span {
+.mainspan span span {
     font-size: 40px;
     color: white;
 }
@@ -155,7 +155,9 @@ nav ul li strong span span {
 }
 
 .mainspan {
-    margin-left: 160px;
+    font-size: 40px;
+    color: #ffc102;
+    font-weight: 900;
 }
 
 nav ul li a:nth-child(2) {
@@ -163,13 +165,12 @@ nav ul li a:nth-child(2) {
     margin-right: 10px;
 }
 
-nav ul li strong span {
-    font-size: 40px;
-    color: #ffc102;
-}
-
 .social-media {
     width: fit-content;
+}
+
+.social-media-header {
+    position: absolute;
 }
 
 .navbar {
@@ -228,18 +229,11 @@ nav ul li strong span {
         height: 44px;
         width: 100px;
     }
-    nav ul li a:nth-child(2) {
-        margin-top: 0px;
-        margin-right: 20px;
-    }
     nav ul li strong span {
         font-size: x-large;
     }
     nav ul li strong span span {
         font-size: x-large;
-    }
-    .mainspan {
-        margin-left: -80px;
     }
     .ytlogo {
         margin-right: 10px;

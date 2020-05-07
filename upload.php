@@ -152,7 +152,7 @@
             $validator = $validator + 1;
         }
         $parentdir = $playtest;
-        if(file_exists($parentdir) == false){
+        if (file_exists($parentdir) == false) {
             mkdir($parentdir);
         }
         $maindir = "$parentdir/resources";
@@ -336,14 +336,16 @@
     <div id="movenav" class="vertnav">
         <div id="butons" class="none">
             <ul type="none" style="width: 100%;" class="hr">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../mime/upload.php">Mime</a></li>
-                <li><a href="../proscenium/upload.php">Proscenium</a></li>
-                <li><a href="../streetplay/upload.php">Street Play</a></li>
-                <li><a href="../band/upload.php">Band</a></li>
-                <li><a href="../dance/upload.php">Dance</a></li>
-                <li><a href="../members/upload.php">Members</a></li>
-                <li><a href="../upcomingevents/upload.php">Upcoming Events</a></li>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about/index.html">About Us</a></li>
+                <li><a href="./registration/index.php">Upload Your Script Ideas</a></li>
+                <li><a href="template.php?playtype=Mime">Mime</a></li>
+                <li><a href="template.php?playtype=Proscenium">Proscenium</a></li>
+                <li><a href="template.php?playtype=Street%20Play">Street Play</a></li>
+                <li><a href="template.php?playtype=Band">Band</a></li>
+                <li><a href="template.php?playtype=Dance">Dance</a></li>
+                <li><a href="template.php?playtype=Members">Members</a></li>
+                <li><a href="template.php?playtype=Upacoming%20Events">Upcoming Events</a></li>
             </ul>
         </div>
     </div>
@@ -380,7 +382,7 @@
                     <input id="position" type="text" name="Position" placeholder="Position Acquired(if not placed type Participant)" required>*<span><br><?php echo $classErr ?></span><br>
                     <div class="col margtop">Please select the photo for main page <span class="error">*</span><br><span></span></div><?php echo $imgerr ?>
                     <input type="file" name="fileToUpload" id="fileToUpload"><br><span style="color: #ffc102"></span><br>
-                    <div class="col margtop">Please select 10 stills from play  <span class="error">*</span><br><span></span></div><?php echo $imgserr ?>
+                    <div class="col margtop">Please select 10 stills from play <span class="error">*</span><br><span></span></div><?php echo $imgserr ?>
                     <input type="file" name="filesToUpload[]" id="filesToUpload" multiple=""><br><span style="color: #ffc102"></span>
                     <div class="col margtop">Enter the names of all the participants <span class="error">*</span><br><span>(And if possible please also mention if they had any prominent character in brackets and seperate the partipants name by commas)</span></div><?php echo $participantsErr ?>
                     <textarea name="participants" maxlength="500"><?php echo $participants ?></textarea>
@@ -401,7 +403,7 @@
             "Name of fest : " . $fest . "\n" .
             "Position acquired: " . $position . "\n" .
             "Participants : " . $participants . "\n" .
-            "Synopsis : " . $synopsis . "\n".
+            "Synopsis : " . $synopsis . "\n" .
             // "Target Dir : " . $target_dir . "\n".
             "Word1 : " . $word1 . "\n" .
             "Word1 : " . $word2

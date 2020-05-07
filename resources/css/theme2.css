@@ -40,10 +40,6 @@ nav ul li strong span span {
     margin-top: 10px;
 }
 
-.mainspan {
-    margin-left: 160px;
-}
-
 nav ul li a:nth-child(2) {
     margin-top: 0px;
     margin-right: 10px;
@@ -60,18 +56,11 @@ nav ul li strong span {
         height: 44px;
         width: 100px;
     }
-    nav ul li a:nth-child(2) {
-        margin-top: 0px;
-        margin-right: 20px;
-    }
     nav ul li strong span {
         font-size: x-large;
     }
     nav ul li strong span span {
         font-size: x-large;
-    }
-    .mainspan {
-        margin-left: 10px;
     }
     .ytlogo {
         margin-right: 10px;
