@@ -56,13 +56,6 @@
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam pariatur, delectus omnis totam adipisci accusamus laudantium. Hic quo modi nulla, vero provident impedit, beatae cupiditate quia aliquam dolores vel soluta?
         </p>
     </div>
-
-    <div class="container-fluid" style="text-align: center;">
-        <div class="nbspan">SELECT THE PERFORMANCE TO UPLOAD</div>
-    </div>
-    <ul type="none" style="width: 100%;">
-        <li><a href="upload.php">Upload</a></li>
-    </ul>
     <footer class="container-fluid">
         <div class="social-media row">
             <a href="https://www.instagram.com/nuts_and_bolts_productions/">

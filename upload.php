@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="../registration/style.css">
-    <link rel="stylesheet" href="../resources/style.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="../bootstrap/jquery.min.js"></script>
-    <script src="../bootstrap/popper.min.js"></script>
-    <script src="../bootstrap/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./resources/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./resources/css/registration.css">
+    <link rel="stylesheet" href="./resources/css/style.css">
+    <link rel="stylesheet" href="./resources/css/mime.css">
+    <script src="./resources/javascripts/jquery.min.js"></script>
+    <script src="./resources/javascripts/popper.min.js"></script>
+    <script src="./resources/javascripts/bootstrap.min.js"></script>
     <title>Document</title>
 </head>
 
@@ -23,12 +23,44 @@
         $data = htmlspecialchars($data);
         return $data;
     }
-    $playname = $directorname = $target_files[] = $dateofperfo = $fest = $position = $email = $participants = $synopsis = $festname = $positionname = $playnamenospace = "";
-    $playnameErr = $directornameErr = $emailErr = $error = $festerror = $participantsErr = $imgerr = $imgserr = $synopsisErr = $classErr = $playnamenospaceErr = "";
-
+    $playname = $directorname = $target_files[] = $dateofperfo = $fest = $position = $email = $participants = $synopsis = $festname = $positionname = $playnamenospace = $playtype = $word1 = $word2 = "";
+    $playnameErr = $directornameErr = $emailErr = $error = $festerror = $participantsErr = $imgerr = $imgserr = $synopsisErr = $classErr = $playnamenospaceErr = $playtypeErr = "";
+    $validator = 0;
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $validator = 0;
+        if (empty($_POST["playtype"])) {
+            $playtypeErr = "Play's category is required";
+            $validator = 0;
+        } else {
+            $playtest = test_input($_POST["playtype"]);
+            if ($playtest == "Mime") {
+                $word1 = "MI";
+                $word2 = "ME";
+            }
+            if ($playtest == "Proscenium") {
+                $word1 = "PROSC";
+                $word2 = "ENIUM";
+            }
+            if ($playtest == "Street Play") {
+                $word1 = "STREET ";
+                $word2 = "PLAY";
+            }
+            if ($playtest == "Dance") {
+                $word1 = "DAN";
+                $word2 = "CE";
+            }
+            if ($playtest == "Band") {
+                $word1 = "BA";
+                $word2 = "ND";
+            }
+            if ($playtest == "Upcoming Events") {
+                $word1 = "UPCOMING ";
+                $word2 = "EVENTS";
+            }
+            $validator = $validator + 1;
+        }
+
         if (empty($_POST["PlayName"])) {
             $playnameErr = "Play's Name is required";
             $validator = 0;
@@ -119,134 +151,139 @@
         } else {
             $validator = $validator + 1;
         }
-        // $maindir = "resources";
-        // if (file_exists($maindir) == false) {
-        //     mkdir($maindir);
-        // }        
-        // $target_dir = "resources/$playnamenospace/";
-        // if(file_exists($target_dir) == false){
-        //     mkdir($target_dir);
-        // }
-        // $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-        // $uploadOkay = 1;
-        // $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+        $parentdir = $playtest;
+        if(file_exists($parentdir) == false){
+            mkdir($parentdir);
+        }
+        $maindir = "$parentdir/resources";
+        if (file_exists($maindir) == false) {
+            mkdir($maindir);
+        }
+        $target_dir = "$maindir/$playnamenospace/";
+        if (file_exists($target_dir) == false) {
+            mkdir($target_dir);
+        }
+        $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+        $uploadOkay = 1;
+        $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
-        // if (isset($_POST["submit"])) {
-        //     $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
-        //     if ($check !== false) {
-        //         echo "File is an image - " . $check["mime"] . ".";
-        //         $uploadOkay = 1;
-        //     } else {
-        //         echo "File is not an image.";
-        //         $uploadOkay = 0;
-        //     }
-        // }
-        // // Check if file already exists
-        // if (file_exists($target_file)) {
-        //     $validator = 0;
-        //     $imgerr = "Sorry, file already exists.";
-        //     $uploadOkay = 0;
-        // }
-        // // Check file size
-        // if ($_FILES["fileToUpload"]["size"] > 500000000) {
-        //     $validator = 0;
-        //     $imgerr = "Sorry, your file is too large.";
-        //     $uploadOkay = 0;
-        // }
-        // // Allow certain file formats
-        // if (
-        //     $imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif"
-        // ) {
-        //     $imgerr = "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
-        //     $uploadOkay = 0;
-        //     $validator = 0;
-        // }
+        if (isset($_POST["submit"])) {
+            $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+            if ($check !== false) {
+                echo "File is an image - " . $check["mime"] . ".";
+                $uploadOkay = 1;
+            } else {
+                echo "File is not an image.";
+                $uploadOkay = 0;
+            }
+        }
+        // Check if file already exists
+        if (file_exists($target_file)) {
+            $validator = 0;
+            $imgerr = "Sorry, file already exists.";
+            $uploadOkay = 0;
+        }
+        // Check file size
+        if ($_FILES["fileToUpload"]["size"] > 500000000) {
+            $validator = 0;
+            $imgerr = "Sorry, your file is too large.";
+            $uploadOkay = 0;
+        }
+        // Allow certain file formats
+        if (
+            $imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif"
+        ) {
+            $imgerr = "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+            $uploadOkay = 0;
+            $validator = 0;
+        }
 
-        // function reArrayFiles($filepost){
-        //     $file_ary = array();
-        //     $file_count = count($filepost['name']);
-        //     $file_keys = array_keys($filepost);
-        //     for ($i=0; $i < $file_count ; $i++) { 
-        //         foreach ($file_keys as $key) {
-        //             $file_ary[$i][$key] = $filepost[$key][$i];
-        //         }
-        //     }
-        //     return $file_ary;
-        // }
+        function reArrayFiles($filepost)
+        {
+            $file_ary = array();
+            $file_count = count($filepost['name']);
+            $file_keys = array_keys($filepost);
+            for ($i = 0; $i < $file_count; $i++) {
+                foreach ($file_keys as $key) {
+                    $file_ary[$i][$key] = $filepost[$key][$i];
+                }
+            }
+            return $file_ary;
+        }
 
-        // if (isset($_FILES['filesToUpload'])) {
-        //     $myFile = reArrayFiles($_FILES['filesToUpload']);
-        //     for($i=0;$i<count($myFile);$i++){ 
-        //         $target_files[$i] = $target_dir . basename($myFile[$i]["name"]);
-        //         $uploadOk[$i] = 1;
-        //         $imageFileType = strtolower(pathinfo($target_files[$i], PATHINFO_EXTENSION));
-        //         $check = getimagesize($myFile[$i]["tmp_name"]);
-                
-        //         if ($check !== false) {
-        //             //echo "File is an image - " . $check["mime"] . ".";
-        //             $uploadOk[$i] = 1;
-        //         } else {
-        //             echo "File is not an image.";
-        //             $uploadOk[$i] = 0;
-        //         }
+        if (isset($_FILES['filesToUpload'])) {
+            $myFile = reArrayFiles($_FILES['filesToUpload']);
+            for ($i = 0; $i < count($myFile); $i++) {
+                $target_files[$i] = $target_dir . basename($myFile[$i]["name"]);
+                $uploadOk[$i] = 1;
+                $imageFileType = strtolower(pathinfo($target_files[$i], PATHINFO_EXTENSION));
+                $check = getimagesize($myFile[$i]["tmp_name"]);
 
-        //         if (file_exists($target_files[$i])) {
-        //             $validator = 0;
-        //             $imgserr = "Sorry, file already exists.";
-        //             $uploadOk[$i] = 0;
-        //         }
+                if ($check !== false) {
+                    //echo "File is an image - " . $check["mime"] . ".";
+                    $uploadOk[$i] = 1;
+                } else {
+                    echo "File is not an image.";
+                    $uploadOk[$i] = 0;
+                }
 
-        //         if ($myFile[$i]["size"] > 500000000) {
-        //             $validator = 0;
-        //             $imgserr = "Sorry, your file is too large.";
-        //             $uploadOk[$i] = 0;
-        //         }
+                if (file_exists($target_files[$i])) {
+                    $validator = 0;
+                    $imgserr = "Sorry, file already exists.";
+                    $uploadOk[$i] = 0;
+                }
 
-        //         if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif") {
-        //             $imgserr = "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
-        //             $uploadOk[$i] = 0;
-        //             $validator = 0;
-        //         }
+                if ($myFile[$i]["size"] > 500000000) {
+                    $validator = 0;
+                    $imgserr = "Sorry, your file is too large.";
+                    $uploadOk[$i] = 0;
+                }
 
-        //         // echo nl2br(
-        //         //     "i = $i \n
-        //         //     Name of the file:".  $target_files[$i]."\n"
-        //         // );
-            // }
-        // }
+                if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif") {
+                    $imgserr = "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+                    $uploadOk[$i] = 0;
+                    $validator = 0;
+                }
+
+                // echo nl2br(
+                //     "i = $i \n
+                //     Name of the file:".  $target_files[$i]."\n"
+                // );
+            }
+        }
     }
-    
+
     // echo "VALIDATOR = " . $validator . "\n"; echo "File count = ". count($myFile);
     // echo "filename = " . $target_files[$k];
-    
-    if ($validator >= 7) {
-        // if ($uploadOkay == 0) {
-        //     $imgerr = "Sorry, your file was not uploaded.";
-        //     // if everything is ok, try to upload file
-        // } else {
-        //     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-        //         $imgerr = "The file " . basename($_FILES["fileToUpload"]["name"]) . " has been uploaded.";
-        //     } else {
-        //         $validator = 0;
-        //         $imgerr = "Sorry, there was an error uploading your file.";
-        //     }
-        // }
-        // $validator = 0;
-        // for ($i = 0; $i < count($myFile); $i++){
-        //     if ($uploadOk[$i] == 0) {
-        //         $imgerr = "Sorry, your file was not uploaded.";
-        //         // if everything is ok, try to upload file
-        //     } else {
-        //         if (move_uploaded_file($myFile[$i]["tmp_name"], $target_files[$i])) {
-        //             $imgserr = "The file " . basename($myFile[$i]["name"]) . " has been uploaded.";
-        //             $uploadOk[$i] = 0;
-        //         } else {
-        //             $uploadOk[$i] = 0;
-        //             $validator = 0;
-        //             $imgserr = "Sorry, there was an error uploading your file.";
-        //         }
-        //     }
-        // }
+
+    if ($validator >= 8) {
+        if ($uploadOkay == 0) {
+            $imgerr = "Sorry, your file was not uploaded.";
+            // if everything is ok, try to upload file
+        } else {
+            if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+                $imgerr = "The file " . basename($_FILES["fileToUpload"]["name"]) . " has been uploaded.";
+            } else {
+                $validator = 0;
+                $imgerr = "Sorry, there was an error uploading your file.";
+            }
+        }
+        $validator = 0;
+        for ($i = 0; $i < count($myFile); $i++) {
+            if ($uploadOk[$i] == 0) {
+                $imgerr = "Sorry, your file was not uploaded.";
+                // if everything is ok, try to upload file
+            } else {
+                if (move_uploaded_file($myFile[$i]["tmp_name"], $target_files[$i])) {
+                    $imgserr = "The file " . basename($myFile[$i]["name"]) . " has been uploaded.";
+                    $uploadOk[$i] = 0;
+                } else {
+                    $uploadOk[$i] = 0;
+                    $validator = 0;
+                    $imgserr = "Sorry, there was an error uploading your file.";
+                }
+            }
+        }
         $playname = test_input($_POST['PlayName']);
         $directorname = test_input($_POST['DirectorName']);
         $dateofperfo = test_input($_POST['PerfDate']);
@@ -254,45 +291,26 @@
         $position = test_input($_POST['Position']);
         $synopsis = test_input($_POST["synopsis"]);
         $participants = test_input($_POST["participants"]);
+        $playtype = test_input($_POST["playtype"]);
 
         $servername = "localhost:3308";
         $username = "root";
         $password = "";
+        $dbName = "nutsandbolts";
 
-        try {
-            $conn = new PDO("mysql:host=$servername;dbname=nutsandbolts", $username, $password);
-            // set the PDO error mode to exception
-            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $sql = "INSERT INTO MIME (playname,playnamenospace,directorname,dateofperfo,fest,position,synopsis) 
-                    VALUES ('$playname','$playnamenospace','$directorname','$dateofperfo','$fest','$position','$synopsis');";
-            $conn->exec($sql);
-            echo "Data stored successfully";
-        } catch (PDOException $e) {
-            echo "Connection failed: " . $e->getMessage();
+        $conn = new mysqli($servername, $username, $password, $dbName);
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        } else {
+            echo "CONNECTED SUCCESSFULLY";
         }
-
-        // $mainfile = fopen("main.html", "a+") or die("Unable to open file");
-        // $divtxt = "        
-        //         <div class='col-sm-4'>
-        //             <a href='$playnamenospace.html'>
-        //                 <div class='row'>
-        //                     <div class='col-sm-12' style=\"background-image: url('$target_file')\">
-        //                         <br>
-        //                     </div>
-        //                 </div>
-        //             </a>
-        //             <a href='$playnamenospace.html'>
-        //                 <div class='row'>
-        //                     <div class='col-sm-12'>
-        //                         <div class='col'>Directed by :<span> $directorname</span> </div>
-        //                         <div class='col'>Performed on :<span> " . date_format($dateofperfo, "d/m/Y") . "</span> </div>
-        //                         <div class='col'>Fest :<span> $fest</span> </div>
-        //                     </div>
-        //                 </div>
-        //             </a>
-        //         </div>";
-        // fwrite($mainfile, $divtxt);
-        // fclose($mainfile);
+        $sql = "INSERT INTO MIME (playname,playnamenospace,directorname,dateofperfo,fest,position,synopsis,playtype,word1,word2,mainimage,image1,image2,image3,image4,image5,image6,image7,image8,image9,image10) 
+                VALUES ('$playname','$playnamenospace','$directorname','$dateofperfo','$fest','$position','$synopsis','$playtype','$word1','$word2','$target_file','$target_files[0]','$target_files[1]','$target_files[2]','$target_files[3]','$target_files[4]','$target_files[5]','$target_files[6]','$target_files[7]','$target_files[8]','$target_files[9]');";
+        if ($conn->query($sql) === TRUE) {
+            echo "Database updated successfully";
+        } else {
+            echo "Error updating database: " . $conn->error;
+        }
     }
 
     ?>
@@ -309,9 +327,7 @@
         <br><br>
         <ul type="none">
             <li><strong>
-                    <!-- <a href="./registration/index.php"> -->
-                    <div class="nbspan">MIME PERFORMANCE UPLOAD FORM</div>
-                    <!-- </a> -->
+                    <div class="nbspan">PERFORMANCE DETAILS UPLOAD FORM</div>
                 </strong>
             </li>
         </ul>
@@ -341,14 +357,31 @@
             <div class="col-sm-12">
                 <h3>Please Fill in the Details of the performance</h3>
                 <form method="post" class="error" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) ?>" enctype="multipart/form-data">
+                    <div class="col margtop">Please select the Category of performance to Upload <span class="error">*</span><br><span></span></div><?php echo $playtypeErr ?>
+                    <div>
+                        <input type="radio" class="radio" id="mime" name="playtype" value="Mime">
+                        <label for="mime">Mime</label><br>
+                        <input type="radio" class="radio" id="proscenium" name="playtype" value="Proscenium">
+                        <label for="proscenium">Proscenium</label><br>
+                        <input type="radio" class="radio" id="street" name="playtype" value="Street Play">
+                        <label for="street">Street Play</label><br>
+                        <input type="radio" class="radio" id="band" name="playtype" value="Band">
+                        <label for="band">Band</label><br>
+                        <input type="radio" class="radio" id="dance" name="playtype" value="Dance">
+                        <label for="dance">Dance</label><br>
+                        <input type="radio" class="radio" id="upcoming" name="playtype" value="Upcoming Events">
+                        <label for="upcoming">Upcoming Events</label><br>
+                    </div>
                     <input id="playname" type="text" name="PlayName" placeholder="Name of the Play(With Spaces)" required>*<span><br><?php echo $playnameErr ?></span><br>
                     <input id="playnamenospaces" type="text" name="PlayNamenospace" onblur="this.value=removeSpaces(this.value);" placeholder="Name of the Play(Without Spaces)" required>*<span><br><?php echo $playnamenospaceErr ?></span><br>
                     <input id="directorname" type="text" name="DirectorName" placeholder="Names of the Directors(Seperated by commas)" required>*<span><br><?php echo $directornameErr ?></span><br>
                     <span style="color: white; font-size: medium;">Date of performance:</span><input id="dateofperfo" type="date" name="PerfDate" placeholder="Date of performance" required>*<span><br><?php echo $error ?></span><br>
                     <input id="fest" type="text" name="Fest" placeholder="Name of the Fest Performed in" required>*<span><br><?php echo $festerror ?></span><br>
                     <input id="position" type="text" name="Position" placeholder="Position Acquired(if not placed type Participant)" required>*<span><br><?php echo $classErr ?></span><br>
-                    <!-- <input type="file" name="fileToUpload" id="fileToUpload"><br><span style="color: #ffc102"><?php echo $imgerr ?></span><br> -->
-                    <!-- <input type="file" name="filesToUpload[]" id="filesToUpload" multiple=""><br><span style="color: #ffc102"><?php echo $imgserr ?></span> -->
+                    <div class="col margtop">Please select the photo for main page <span class="error">*</span><br><span></span></div><?php echo $imgerr ?>
+                    <input type="file" name="fileToUpload" id="fileToUpload"><br><span style="color: #ffc102"></span><br>
+                    <div class="col margtop">Please select 10 stills from play  <span class="error">*</span><br><span></span></div><?php echo $imgserr ?>
+                    <input type="file" name="filesToUpload[]" id="filesToUpload" multiple=""><br><span style="color: #ffc102"></span>
                     <div class="col margtop">Enter the names of all the participants <span class="error">*</span><br><span>(And if possible please also mention if they had any prominent character in brackets and seperate the partipants name by commas)</span></div><?php echo $participantsErr ?>
                     <textarea name="participants" maxlength="500"><?php echo $participants ?></textarea>
                     <div class="col margtop">Enter the play's synopsis <span class="error">*</span><br><span>(Limit : 500 characters)</span></div><?php echo $synopsisErr ?>
@@ -368,11 +401,14 @@
             "Name of fest : " . $fest . "\n" .
             "Position acquired: " . $position . "\n" .
             "Participants : " . $participants . "\n" .
-            "Synopsis : " . $synopsis
+            "Synopsis : " . $synopsis . "\n".
+            // "Target Dir : " . $target_dir . "\n".
+            "Word1 : " . $word1 . "\n" .
+            "Word1 : " . $word2
     );
     ?>
 
-    <footer>
+    <footer style="position: static;">
         <div class="social-media row">
             <a href="https://www.instagram.com/nuts_and_bolts_productions/">
                 <img src="../resources/insta.png" class="instalogo instafooter" alt="Instagram">
