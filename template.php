@@ -2,10 +2,22 @@
 <html lang="en" style="scroll-behavior: smooth;">
 
 <?php
-$servername = "localhost:3308";
+$servername = "localhost:3306";
 $username = "root";
 $password = "";
 $dbName = "nutsandbolts";
+
+// $mysqli = new mysqli('localhost', 'root', '');
+// if ($mysqli->connect_errno) {
+//     trigger_error('query failed: '.$mysqli->connect_error, E_USER_ERROR);
+// }
+
+// $result = $mysqli->query('SHOW databases')
+//     or trigger_error('connect failed: '.join(',', $mysqli->error_list), E_USER_ERROR);
+
+// foreach( $result as $row ) {
+//     echo join(', ', $row), "<br />\r\n";
+// }
 
 $conn = new mysqli($servername, $username, $password, $dbName);
 if ($conn->connect_error) {

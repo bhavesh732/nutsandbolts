@@ -381,7 +381,7 @@
                     <input id="fest" type="text" name="Fest" placeholder="Name of the Fest Performed in" required>*<span><br><?php echo $festerror ?></span><br>
                     <input id="position" type="text" name="Position" placeholder="Position Acquired(if not placed type Participant)" required>*<span><br><?php echo $classErr ?></span><br>
                     <div class="col margtop">Please select the photo for main page <span class="error">*</span><br><span></span></div><?php echo $imgerr ?>
-                    <input type="file" name="fileToUpload" id="fileToUpload"><br><span style="color: #ffc102"></span><br>
+                    <input type="file" name="path" id="fileToUpload"><br><span style="color: #ffc102"></span><br>
                     <div class="col margtop">Please select 10 stills from play <span class="error">*</span><br><span></span></div><?php echo $imgserr ?>
                     <input type="file" name="filesToUpload[]" id="filesToUpload" multiple=""><br><span style="color: #ffc102"></span>
                     <div class="col margtop">Enter the names of all the participants <span class="error">*</span><br><span>(And if possible please also mention if they had any prominent character in brackets and seperate the partipants name by commas)</span></div><?php echo $participantsErr ?>

@@ -2,7 +2,7 @@
 <html lang="en" style="scroll-behavior: smooth;">
 
 <?php
-$servername = "localhost:3308";
+$servername = "localhost:3306";
 $username = "root";
 $password = "";
 $dbName = "nutsandbolts";
